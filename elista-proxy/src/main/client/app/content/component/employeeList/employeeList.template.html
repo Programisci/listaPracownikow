@@ -1,16 +1,14 @@
 <div class="employeeList__box md-whiteframe-z3">
     <md-content class="employeeList__content">
             <div class="employeeList__top">
-
+              <input class="employeeList__share"
+                     type="text"
+                     ng-model="search"
+                     placeholder="{{ 'search.searching' | translate }}" />
             </div>
 
-            <md-icon class="employeeList__hide"
-                     translate="icons.search"></md-icon>
         <md-list class="employee__list" flex>
-          <input style="width: 100%;"
-                  type="text"
-                 ng-model="search"
-                 placeholder="{{ 'search.searching' | translate }}" />
+
             <div >
               <div ng-repeat="employee in list.arrayEmployee | filter:search | orderBy: 'employee.id'">
 
@@ -19,7 +17,7 @@
                     <img src="{{employee.avatarPath}}"
                          class="md-avatar"
                          alt="{{employee.name}} avatar" />
-                    <div>
+                    <div class="employeeList__text">
                       {{employee.name}} {{employee.lastname}}
 
                     </div>

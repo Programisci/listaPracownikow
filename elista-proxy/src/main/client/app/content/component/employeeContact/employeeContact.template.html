@@ -80,6 +80,7 @@
             <div layout="column" flex="100">
                 <md-input-container>
                     <input required
+                           placeholder="{{'contact.contactValue' | translate }}"
                            name="contactValue"
                            ng-model="contact.contact.contactValue">
 
@@ -89,23 +90,23 @@
                 </md-input-container>
             </div>
 
-            <div layout="column" flex="100">
-                <md-input-container class="md-block" flex-gt-sm>
-                <md-select name="contactType"
-                           placeholder="{{ 'contact.typeContact' | translate }}"
-                           ng-model="contact.contact.contactType"
-                           required>
+            <!--<div layout="column" flex="100">-->
+                <!--<md-input-container class="md-block" flex-gt-sm>-->
+                <!--<md-select name="contactType"-->
+                           <!--placeholder="{{ 'contact.typeContact' | translate }}"-->
+                           <!--ng-model="contact.contact.contactType"-->
+                           <!--required>-->
 
-                <md-option ng-repeat="(key, value) in contact.contactType.contact"
-                           value="{{key}}">{{key}}</md-option>
+                <!--<md-option ng-repeat="(key, value) in contact.contactType.contact"-->
+                           <!--value="{{key}}">{{key}}</md-option>-->
 
-                </md-select>
-                    <div ng-messages="contactForm.contactType.$error">
-                    <div ng-message="required"
-                         translate="contact.typeRequired"></div>
-                    </div>
-                </md-input-container>
-            </div>
+                <!--</md-select>-->
+                    <!--<div ng-messages="contactForm.contactType.$error">-->
+                    <!--<div ng-message="required"-->
+                         <!--translate="contact.typeRequired"></div>-->
+                    <!--</div>-->
+                <!--</md-input-container>-->
+            <!--</div>-->
 
 
             <div layout="column" flex="100" ng-if="contact.hideId">

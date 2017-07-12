@@ -26,10 +26,6 @@ public class EmployeeRestController {
 
     @RequestMapping(value = "/findAll", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     public List<EmployeeDTO> findAll() {
-//        if (!alreadyExecuted){
-//            employeeService.init();
-//            alreadyExecuted = true;
-//        }
         return employeeService.findAllForTable();
     }
 
