@@ -69,6 +69,7 @@ public class EmployeeServiceImpl implements IEmployeeService {
 
     // --------------------- customowe zapytania ----------------------
 
+
     @Override
     public List<EmployeeDTO> init() {
         List<EmployeeOB> pOBList = new ArrayList<>();

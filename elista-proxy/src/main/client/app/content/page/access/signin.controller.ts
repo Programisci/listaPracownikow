@@ -6,6 +6,7 @@ module employees {
   export class SigninCtrl {
 
     user: IUser = {};
+    addDataBase: boolean = true;
 
     // @ngInject
     constructor(private $translatePartialLoader: ng.translate.ITranslatePartialLoaderService,
@@ -21,7 +22,11 @@ module employees {
     }
 
     private init(){
-      this.EmployeeBackService.getInit().then(this.getEmployeeInitCallBack);
+     if(this.addDataBase == true){
+       this.EmployeeBackService.getInit().then(this.getEmployeeInitCallBack);
+       this.EmployeeBackService.getInitContact().then(this.getEmployeeInitCallBack);
+       this.addDataBase == false;
+     };
 
     }
 

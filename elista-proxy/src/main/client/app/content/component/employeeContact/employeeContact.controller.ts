@@ -8,10 +8,10 @@ module employees {
 
     export class EmployeeContactCtrl {
 
-        details: Array<IContact>;
         employeeId = this.$stateParams.id;
         contact: IContact;
-        contactType: IContactArrayBase<IContactType>;
+        allContacts: Array<IContact> = [];
+        employeeContact: Array<IContact> = [];
         formContainerVisible = false;
 
 
@@ -19,36 +19,42 @@ module employees {
         constructor(private $translatePartialLoader: ng.translate.ITranslatePartialLoaderService,
                     private EmployeeBackService: IEmployeeBackService,
                     private ContactTypeService: IContactTypeService,
-                    private $stateParams: ActorsStateParams
+                    private $stateParams: ActorsStateParams,
+                    private $timeout: ng.ITimeoutService
         ) {
-           // this.init();
+            this.init();
             this.$translatePartialLoader.addPart('contact');
             this.$translatePartialLoader.addPart('icons');
         }
 
         private init() {
-                this.ContactTypeService.getContacts(this.employeeId).then(this.getContactCallBack);
-                this.ContactTypeService.getContactsType().then(this.getContactsTypeCallBack);
+            this.allContacts = [];
+            this.employeeContact = [];
+                this.ContactTypeService.getContact().then(this.getContactsCallBack);
         }
 
-        private getContactCallBack = (res: Array<IContact>) => {
-            this.details = res;
+        private getContactsCallBack = (res: Array<IContact>) => {
+            this.allContacts = res;
+
+            for (var i = 0; i< this.allContacts.length; i++){
+                if (this.allContacts[i].employeeId == this.employeeId){
+                    this.employeeContact.push(this.allContacts[i]);
+                }
+            }
         };
 
-        private getContactsTypeCallBack = (res: IContactArrayBase<IContactType>) => {
-            this.contactType = res;
+        private deleteContactId(id: number) {
+            this.ContactTypeService.deleteContactDetail(id).then(this.contactDeleteCallBack);
+
         };
 
-        private deleteContactId(contactId: number) {
-            this.ContactTypeService.deleteContacts(this.employeeId, contactId).then(this.contactDeleteCallBack);
-        };
-
-        private contactDeleteCallBack = (res: IEmployee) => {
+        private contactDeleteCallBack = (res: IContact) => {
             this.init();
         };
 
         private saveContact = () => {
-                this.ContactTypeService.saveContact(this.employeeId, this.contact).then(this.saveContactCallBack);
+            this.contact.employeeId = this.employeeId;
+                this.ContactTypeService.saveContact(this.contact).then(this.saveContactCallBack);
         };
 
         private saveContactCallBack = (response) => {
