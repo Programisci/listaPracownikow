@@ -7,56 +7,27 @@
         </md-subheader>
 
 
-        <!--<div ng-repeat="con in contact.details">-->
-        <div>
-        <md-list-item class="contact__item">
+        <div ng-repeat="con in contact.employeeContact">
+        <div class="contact__item">
 
             <i class="contact__fa fa fa-skype" aria-hidden="true"></i>
-            <label class="contact__padding">SKYPE</label>
 
             <div  layout="column">
-                <a class="contact__a"
+                <a class="contact__value"
                    href="mailto:{{con.contactValue}}">
-                    sivy12_12@yahoo.com
+                    {{con.contactValue}}
                 </a>
+                <label class="contact__type">{{con.contactType}} </label>
+
             </div>
 
-            <md-icon class="contact__delete"
-                     translate="icons.close"></md-icon>
-        </md-list-item>
-        <md-divider></md-divider>
-        <md-list-item class="contact__item">
-
-            <i class="contact__fa fa fa-skype" aria-hidden="true"></i>
-            <label class="contact__padding">SKYPE</label>
-
-            <div  layout="column">
-                <a class="contact__a"
-                   href="mailto:{{con.contactValue}}">
-                    sivy12_12@yahoo.com
-                </a>
-            </div>
 
             <md-icon class="contact__delete"
+                     ng-click="contact.deleteContactId(con.id)"
                      translate="icons.close"></md-icon>
-        </md-list-item>
+        </div>
         <md-divider></md-divider>
-        <md-list-item class="contact__item">
 
-            <i class="contact__fa fa fa-skype" aria-hidden="true"></i>
-            <label class="contact__padding">SKYPE</label>
-
-            <div  layout="column">
-                <a class="contact__a"
-                   href="mailto:{{con.contactValue}}">
-                    sivy12_12@yahoo.com
-                </a>
-            </div>
-
-            <md-icon class="contact__delete"
-                     translate="icons.close"></md-icon>
-        </md-list-item>
-        <md-divider></md-divider>
         </div>
 
         <md-list-item>
@@ -76,7 +47,7 @@
             <div class="header__main">
             <label translate="contact.addContact"></label>
             </div>
-
+<div class="contact__margin">
             <div layout="column" flex="100">
                 <md-input-container>
                     <input required
@@ -90,30 +61,16 @@
                 </md-input-container>
             </div>
 
-            <!--<div layout="column" flex="100">-->
-                <!--<md-input-container class="md-block" flex-gt-sm>-->
-                <!--<md-select name="contactType"-->
-                           <!--placeholder="{{ 'contact.typeContact' | translate }}"-->
-                           <!--ng-model="contact.contact.contactType"-->
-                           <!--required>-->
-
-                <!--<md-option ng-repeat="(key, value) in contact.contactType.contact"-->
-                           <!--value="{{key}}">{{key}}</md-option>-->
-
-                <!--</md-select>-->
-                    <!--<div ng-messages="contactForm.contactType.$error">-->
-                    <!--<div ng-message="required"-->
-                         <!--translate="contact.typeRequired"></div>-->
-                    <!--</div>-->
-                <!--</md-input-container>-->
-            <!--</div>-->
-
-
-            <div layout="column" flex="100" ng-if="contact.hideId">
+            <div layout="column" flex="100">
                 <md-input-container>
-                    <input required name="employeeId"
-                           ng-model="contact.employeeId"
-                           readonly>
+                    <input required
+                           placeholder="{{'contact.choose' | translate }}"
+                           name="contactType"
+                           ng-model="contact.contact.contactType">
+
+                    <div ng-messages="contactForm.contactType.$error">
+                        <div ng-message="required" translate="contact.typeRequired"></div>
+                    </div>
                 </md-input-container>
             </div>
 
@@ -129,6 +86,7 @@
                     <md-icon translate="icons.add"></md-icon>
                 </md-button>
             </div>
+</div>
         </form>
     </div>
 

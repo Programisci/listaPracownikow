@@ -32,10 +32,6 @@ public class EmployeeOB {
     @Column(name = "avatarPath")
     private String avatarPath;
 
-    @OneToMany(fetch = FetchType.LAZY)
-    @JoinColumn(name = "employee_id")
-    private Set<ContactOB> contact;
-
     public Long getId() {
         return id;
     }
@@ -84,11 +80,4 @@ public class EmployeeOB {
         avatarPath = aAvatarPath;
     }
 
-    public Set<ContactOB> getContact() {
-        return contact;
-    }
-
-    public void setContact(Set<ContactOB> aContact) {
-        contact = aContact;
-    }
 }

@@ -4,10 +4,10 @@ module employees {
     'use strict';
 
     export interface IContactTypeService {
-        getContacts (id: number): ng.IHttpPromise<Array<IContact>>;
-        deleteContacts (id: number, idContact: number): ng.IHttpPromise<IContact>;
-        saveContact(id: number, contact: IContact): ng.IHttpPromise<IContact>;
-        getContactsType (): ng.IHttpPromise<IContactArrayBase<IContactType>>;
+        getContact (): ng.IHttpPromise<Array<IContact>>;
+        getContactDetail(employeeId: number): ng.IHttpPromise<IContact>;
+        deleteContactDetail (id: number): ng.IHttpPromise<IContact>;
+        saveContact(employee: IContact): ng.IHttpPromise<IContact>;
     }
     /*obiekt*/
 
@@ -22,11 +22,8 @@ module employees {
 
         }
 
-        /*jeżeli biorę tablice musze ją zadeklarować*/
-        public getContacts (id: number): ng.IHttpPromise<Array<IContact>> {
-            return this.$resource(`${this.ConfigService.getHost()}/employee/:id/contacts`, {
-                id: id,
-            }, {
+        public getContact (): ng.IHttpPromise<Array<IContact>> {
+            return this.$resource(`${this.ConfigService.getHost()}/employee/contact/findAll`, {}, {
                 'query': {
                     method: 'GET',
                     isArray: true
@@ -35,8 +32,9 @@ module employees {
 
         };
 
-        public getContactsType (): ng.IHttpPromise<IContactArrayBase<IContactType>> {
-            return this.$resource(`${this.ConfigService.getHost()}/employee/contacts`, {
+        public getContactDetail (id: number): ng.IHttpPromise<IContact> {
+            return this.$resource(`${this.ConfigService.getHost()}/employee/contact/findOne?id=:id`, {
+                id: id,
             }, {
                 'query': {
                     method: 'GET'
@@ -45,10 +43,9 @@ module employees {
 
         };
 
-        public deleteContacts (id: number, idContact: number): ng.IHttpPromise<IContact> {
-            return this.$resource(`${this.ConfigService.getHost()}/employee/:id/contacts/:idContact`, {
+        public deleteContactDetail (id: number): ng.IHttpPromise<IContact> {
+            return this.$resource(`${this.ConfigService.getHost()}/employee/contact/delete?id=:id`, {
                 id: id,
-                idContact: idContact,
             }, {
                 'query': {
                     method: 'DELETE'
@@ -57,9 +54,8 @@ module employees {
 
         };
 
-        public saveContact(id: number, contact: IContact): ng.IHttpPromise<IContact> {
-            return this.$resource(`${this.ConfigService.getHost()}/employee/:id/contacts`, {
-                id: id,
+        public saveContact(contact: IContact): ng.IHttpPromise<IContact> {
+            return this.$resource(`${this.ConfigService.getHost()}/employee/contact/save`, {
             }, {
                 'query': {
                     method: 'POST'

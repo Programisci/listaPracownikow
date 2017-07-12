@@ -15,8 +15,6 @@ public interface IEmployeeService {
 
     EmployeeDTO save(EmployeeDTO userDTO);
 
-    List<String> findByIdContact(Long aEmployeeId);
-
 
     List<EmployeeDTO> init();
 

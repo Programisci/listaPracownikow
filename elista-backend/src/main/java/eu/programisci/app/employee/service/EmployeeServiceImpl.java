@@ -2,15 +2,11 @@ package eu.programisci.app.employee.service;
 
 import eu.programisci.app.employee.converters.EmployeeConverter;
 import eu.programisci.app.employee.dto.EmployeeDTO;
-import eu.programisci.app.employee.dto.EmployeeLightDTO;
 import eu.programisci.app.employee.enums.EPosition;
 import eu.programisci.app.employee.ob.EmployeeOB;
-import eu.programisci.app.employee.repository.IContactRepository;
 import eu.programisci.app.employee.repository.IEmployeeRepository;
-import eu.programisci.app.employee.service.IEmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -73,10 +69,6 @@ public class EmployeeServiceImpl implements IEmployeeService {
 
     // --------------------- customowe zapytania ----------------------
 
-    @Override
-    public List<String> findByIdContact(Long aEmployeeId) {
-        return employeeRepository.findByIdContact(aEmployeeId);
-    }
 
     @Override
     public List<EmployeeDTO> init() {

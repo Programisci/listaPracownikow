@@ -8,6 +8,8 @@ module employees {
         getEmployeeDetail(employeeId: number): ng.IHttpPromise<IEmployee>;
         deleteEmployeeDetail (id: number): ng.IHttpPromise<IEmployee>;
         saveEmployee(employee: IEmployee): ng.IHttpPromise<IEmployee>;
+        getInit ();
+        getInitContact ();
 
     }
 
@@ -23,6 +25,24 @@ module employees {
 
         }
 
+        public getInit () {
+            return this.$resource(`${this.ConfigService.getHost()}/employee/init`, {}, {
+                'query': {
+                    method: 'GET',
+                    isArray: true
+                }
+            }).query({}).$promise
+
+        };
+        public getInitContact () {
+            return this.$resource(`${this.ConfigService.getHost()}/employee/initContact`, {}, {
+                'query': {
+                    method: 'GET',
+                    isArray: true
+                }
+            }).query({}).$promise
+
+        };
         public getEmployee (): ng.IHttpPromise<Array<IEmployee>> {
             return this.$resource(`${this.ConfigService.getHost()}/employee/findAll`, {}, {
                 'query': {

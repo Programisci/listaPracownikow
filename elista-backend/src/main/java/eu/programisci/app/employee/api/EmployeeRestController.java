@@ -44,8 +44,5 @@ public class EmployeeRestController {
         return EPosition.values();
     }
 
-    @RequestMapping(value = "/findByIdContact", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-    public List<String> findByIdContact(@RequestParam("employeeId") Long aEmployeeId) {
-        return employeeService.findByIdContact(aEmployeeId);
-    }
+
 }
