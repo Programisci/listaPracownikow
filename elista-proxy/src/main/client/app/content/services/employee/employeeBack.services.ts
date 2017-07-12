@@ -10,6 +10,7 @@ module employees {
         saveEmployee(employee: IEmployee): ng.IHttpPromise<IEmployee>;
         getInit ();
         getInitContact ();
+        getInitProject ();
 
     }
 
@@ -36,6 +37,15 @@ module employees {
         };
         public getInitContact () {
             return this.$resource(`${this.ConfigService.getHost()}/employee/initContact`, {}, {
+                'query': {
+                    method: 'GET',
+                    isArray: true
+                }
+            }).query({}).$promise
+
+        };
+        public getInitProject () {
+            return this.$resource(`${this.ConfigService.getHost()}/employee/initProject`, {}, {
                 'query': {
                     method: 'GET',
                     isArray: true

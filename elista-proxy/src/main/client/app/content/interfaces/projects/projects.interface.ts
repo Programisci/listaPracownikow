@@ -7,6 +7,7 @@ module employees {
         id: number;
         projectName: string;
         status: string;
+        employeeId: number;
     }
 
 }
