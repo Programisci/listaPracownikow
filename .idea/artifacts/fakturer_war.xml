@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="fakturer:war">
+    <output-path>$PROJECT_DIR$/elista-backend/target</output-path>
+    <root id="archive" name="fakturer-0.0.1-SNAPSHOT.war">
+      <element id="artifact" artifact-name="fakturer:war exploded" />
+    </root>
+  </artifact>
+</component>

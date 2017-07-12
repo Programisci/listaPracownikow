@@ -1,0 +1,18 @@
+{
+  "detail": {
+    "place": "Pokój",
+    "position": "Stanowisko",
+    "available": "Zalogowany",
+    "noavailable": "Nie zaslogowany",
+    "edit": "Edytuj swoje dane",
+    "name": "Imię",
+    "lastname": "Nazwisko",
+    "avatar": "Avatar",
+    "editTitle": "Edytuj swoje dane",
+    "addNewEmployeeTitle": "Dodaj użytkownika",
+    "nameRequired": "Twoje imię jest wymagane.",
+    "lastnameRequired": "Twoje nazwisko jest wymagane.",
+    "positionRequired": "Twoje stanowisko jest wymagane.",
+    "avatarRequired": "Twój avatar jest wymagane."
+  }
+}

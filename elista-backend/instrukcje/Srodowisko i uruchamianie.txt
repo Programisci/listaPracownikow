@@ -1,0 +1,39 @@
+Wymagania �rodowiskowe do przedmotiu fakultatywnego Programi�ci Sp. z o.o.
+1. JRE 8 (najnowsza)
+2. Zmienna �rodowiskowa (systemowa) JAVA_HOME wskazuj�ca na katalog instalacji JRE (tam gdzie le�y katalog bin)
+3. Zmienna �rodowiskowa (systemowa) PATH - dopisa� �cie�k� do bin w katalogu JAVA_HOME
+4. Maven 3.3.9+
+5. Zmienna �rodowiskowa (systemowa) M2_HOME wskazuj�ca na katalog instalacji Mavena (tam gdzie le�y katalog bin)
+6. Zmienna �rodowiskowa (systemowa) PATH - dopisa� �cie�k� do bin w katalogu M2_HOME
+7. Posgresql 9.4+
+8. pgAdmin III (najnowszy)
+9. Git (najnowszy)
+10. NodeJS (najnowszy)
+11. Idea IntelliJ Ultimate (licencja studencka) lub Community
+12. Konto GitHub
+
+
+
+Pobieranie:
+W IntelliJ -   VCS -> Checkout from version control -> GitHub
+Autentykacja przez password
+URL: https://github.com/pawel-dubilowicz/fakturer.git
+login i has�o w�asne
+wskaza� gdzie ma si� zapisa�
+
+
+Uruchamianie:
+BACKEND:
+Po prawej stronie IntelliJ znajduje si� zak�adka Maven Projects
+W niej interesuj� nas 3 konkretne dzia�ania:
+- Lifecycle -> clean - czy�ci projekt
+- Lifecycle -> install - buduje projekt i generuje .war
+- Plugins -> spring-boot -> spring-boot:run - uruchamia aplikacj� serwerow� pod adresem http://localhost:8080/
+- w celu wypełnienia bazy danych trzeba wpisać http://localhost:8080/employee/init
+
+FRONTEND:
+W dolnym pasku IntelliJ jest zak�adka Terminal
+W terminalu wpisujemy "cd web"
+Je�eli jest to pierwsze uruchomienie wpisujemy "npm install connect serve-static"
+Instaluje to potrzebne do dzia�ania biblioteki NodeJS
+Nast�pnie wpisujemy "node server.js" - uruchamiamy w ten spos�b aplikacj� webow� pod adresem http://localhost:9090/

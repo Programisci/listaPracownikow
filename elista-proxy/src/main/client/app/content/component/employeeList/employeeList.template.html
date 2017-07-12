@@ -1,0 +1,50 @@
+<div class="employeeList__box md-whiteframe-z3">
+    <md-content class="employeeList__content">
+            <div class="employeeList__top">
+
+            </div>
+
+            <md-icon class="employeeList__hide"
+                     translate="icons.search"></md-icon>
+        <md-list class="employee__list" flex>
+          <input style="width: 100%;"
+                  type="text"
+                 ng-model="search"
+                 placeholder="{{ 'search.searching' | translate }}" />
+            <div >
+              <div ng-repeat="employee in list.arrayEmployee | filter:search | orderBy: 'employee.id'">
+
+                <a href="#/access/page/pageDetail/{{employee.id}}">
+                  <md-list-item ng-click="list.selectEmployeeId(employee.id)">
+                    <img src="{{employee.avatarPath}}"
+                         class="md-avatar"
+                         alt="{{employee.name}} avatar" />
+                    <div>
+                      {{employee.name}} {{employee.lastname}}
+
+                    </div>
+
+                  </md-list-item>
+                </a>
+
+              </div>
+
+
+                <!--<grid-list id="employees"-->
+                           <!--actor-type="list.actorType"-->
+                           <!--on-change-view-type="list.setViewType($event.viewType)"-->
+                           <!--add-event="list.addNewOrder($event.orderType)"-->
+                           <!--on-update-actor="list.updateActor($event)"-->
+                           <!--current-actor="list.order"-->
+                           <!--update="list.newList"-->
+                           <!--update-selected="list.updateSelected"-->
+                           <!--item-for-update="list.order"-->
+                           <!--items-per-page="15"-->
+                           <!--update="list.newList"></grid-list>-->
+            </div>
+
+        </md-list>
+
+
+    </md-content>
+</div>

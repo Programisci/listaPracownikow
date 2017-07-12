@@ -1,0 +1,69 @@
+<div class="navbar__form md-whiteframe-z3" layout="column" flex="100">
+    <form name="forms" novalidate>
+        <div class="header__main">
+            <div translate="detail.addNewEmployeeTitle"></div>
+        </div>
+
+        <div layout="column" flex="100">
+            <md-input-container flex="50">
+                <label translate="detail.name"></label>
+                <input required
+                       name="clientName"
+                       ng-model="formC.employee.name">
+
+                <div ng-messages="forms.clientName.$error">
+                    <div ng-message="required" translate="detail.nameRequired"></div>
+                </div>
+            </md-input-container>
+        </div>
+
+        <div layout="column" flex="100">
+            <md-input-container flex="50">
+                <label translate="detail.lastname"></label>
+                <input required
+                       name="clientLastname"
+                       ng-model="formC.employee.lastname">
+
+                <div ng-messages="forms.clientLastname.$error">
+                    <div ng-message="required" translate="detail.lastnameRequired"></div>
+                </div>
+            </md-input-container>
+        </div>
+
+        <div layout="column" flex="100">
+            <md-input-container flex="50">
+                <label translate="detail.position"></label>
+                <input required
+                       name="clientSection"
+                       ng-model="formC.employee.position">
+
+                <div ng-messages="forms.clientSection.$error">
+                    <div ng-message="required" translate="detail.positionRequired"></div>
+                </div>
+            </md-input-container>
+        </div>
+
+
+        <div layout="column" flex="100">
+            <md-input-container flex="50">
+                <label translate="detail.avatar"></label>
+                <input required
+                       name="clientAvatar"
+                       ng-model="formC.employee.avatarPath">
+
+                <div ng-messages="forms.clientAvatar.$error">
+                    <div ng-message="required" translate="detail.avatarRequired"></div>
+                </div>
+            </md-input-container>
+        </div>
+
+        <div>
+            <md-button class="navbar__btn "
+                       ng-click="formC.saveEmployee()"
+                       type="submit">
+                <md-icon translate="icons.done"></md-icon>
+            </md-button>
+        </div>
+
+    </form>
+</div>
