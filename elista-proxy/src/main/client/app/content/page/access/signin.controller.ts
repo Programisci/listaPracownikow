@@ -11,12 +11,24 @@ module employees {
     constructor(private $translatePartialLoader: ng.translate.ITranslatePartialLoaderService,
                 private $cookies: ng.cookies.ICookiesService,
                 private $state: ng.ui.IStateService,
+                private EmployeeBackService: IEmployeeBackService,
                 private AuthService: IAuthService,
                 private DataService: IDataService) {
       this.AuthService.endSession();
       this.$translatePartialLoader.addPart('signin');
+      this.init();
 
     }
+
+    private init(){
+      this.EmployeeBackService.getInit().then(this.getEmployeeInitCallBack);
+
+    }
+
+
+    private getEmployeeInitCallBack = () => {
+    };
+
 
     public login() {
       this.AuthService.login(this.user).then(this.loginResponseCallback);

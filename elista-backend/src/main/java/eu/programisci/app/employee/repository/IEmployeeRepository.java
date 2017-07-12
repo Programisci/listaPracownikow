@@ -13,11 +13,5 @@ import java.util.List;
 
 @Repository
 public interface IEmployeeRepository extends JpaRepository<EmployeeOB,Long> {
-    // Wiazanie po id rodzica. Relacja lezy po stronie rodzica.
-    // Przyklad: GET /api/relacje/znajdzTelefonyPoIdKlienta?klientId=1
-    @Query("SELECT t.contactValue " +
-            " FROM EmployeeOB k " +
-            " LEFT JOIN k.contact t " +
-            " WHERE k.id = :employeeId ")
-    List<String> findByIdContact(@Param("employeeId") Long aEmployeeId);
+
 }
