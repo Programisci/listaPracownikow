@@ -17,7 +17,9 @@ module employees {
         projectsArrayRollout: Array<IProjects> = [];
         projectsArrayClosure: Array<IProjects> = [];
         formContainerVisible = false;
-        public projectType: Array<String>;
+        public projectType: Array<String> =[];
+        lista: Array<IProjectType> = [];
+        projectNew: IProjects;
 
         // @ngInject
         constructor(private $translatePartialLoader: ng.translate.ITranslatePartialLoaderService,
@@ -30,12 +32,20 @@ module employees {
         }
 
         private init() {
+            this.projectsArray = [];
+            this.projectsArrayMaintenance = [];
+            this.projectsArrayConceptual = [];
+            this.projectsArrayDevelop = [];
+            this.projectsArrayRollout = [];
+            this.projectsArrayClosure = [];
             this.ProjectService.getProject().then(this.getProjectsCallBack);
-            this.ProjectService.getProjectStatus().then(this.getProjectsStatusCallBack);
+            // this.ProjectService.getProjectStatus().then(this.getProjectsStatusCallBack);
         };
 
         private getProjectsStatusCallBack(res: Array<String>){
-            this.projectType = res;
+            for(var i = 0; i< res.length; i++){
+                // this.lista[i].projectStatus = res[i];
+            }
 
         }
 
@@ -64,6 +74,17 @@ module employees {
 
         };
 
+        private saveProject = () => {
+            this.projectNew.employeeId = this.employeeId;
+            this.ProjectService.saveProject(this.projectNew).then(this.saveContactCallBack);
+        };
+
+        private saveContactCallBack = (response) => {
+            this.formContainerVisible = false;
+            this.init();
+            this.projectNew.projectName = defaultStatus;
+            this.projectNew.status = defaultStatus;
+        };
 
         private formContainer() {
             this.formContainerVisible = !this.formContainerVisible;

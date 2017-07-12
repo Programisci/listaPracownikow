@@ -104,48 +104,40 @@
 
                 <div layout="column" flex="100">
                     <md-input-container flex="50">
-                        <label translate="project.projectName"></label>
-                        <input required name="projekt">
+                        <input required
+                               placeholder="{{'project.projectName' | translate }}"
+                               ng-model="projectCtr.projectNew.projectName"
+                               name="projekt">
                         <div ng-messages="projectForm.projekt.$error">
                             <div ng-message="required" translate="project.nameRequired"></div>
                         </div>
                     </md-input-container>
                 </div>
 
-                <!--<div layout="column" flex="100">-->
-                    <!--<md-input-container class="md-block" flex-gt-sm>-->
-                        <!--<md-select name="contactType"-->
-                                   <!--placeholder="{{ 'project.choose' | translate }}"-->
-                                   <!--ng-model="projectCtr.newProject.status"-->
-                                   <!--required>-->
-                            <!--<md-option value="Aktualne">Aktualne</md-option>-->
-                            <!--<md-option value="Archiwalne">Archiwalne</md-option>-->
-                        <!--</md-select>-->
-                        <!--<div ng-messages="contactForm.contactType.$error">-->
-                            <!--<div ng-message="required" translate="contact.typeRequired"></div>-->
-                        <!--</div>-->
-                    <!--</md-input-container>-->
-                <!--</div>-->
-
                 <div layout="column" flex="100">
-                    <md-input-container class="md-block" flex-gt-sm>
+                    <!--<md-input-container class="md-block" flex-gt-sm>-->
                         <md-select name="status"
                                    placeholder="{{ 'contact.typeContact' | translate }}"
-                                   ng-model="projectCtr.newProject.status"
+                                   ng-model="projectCtr.projectNew.status"
                                    required>
 
-                            <md-option ng-repeat="item in projectCtr.projectType"
-                                       value="{{item}}">{{item}}</md-option>
+                            <!--<md-option ng-repeat="item in projectCtr.projectType"-->
+                                       <!--value="{{item}}">{{item}}</md-option>-->
+                            <md-option value="MAINTENANCE">MAINTENANCE</md-option>
+                            <md-option value="CONCEPTUAL_FRAMEWORK">CONCEPTUAL_FRAMEWORK</md-option>
+                            <md-option value="DEVELOPMENT">DEVELOPMENT</md-option>
+                            <md-option value="ROLLOUT">ROLLOUT</md-option>
+                            <md-option value="CLOSURE">CLOSURE</md-option>
 
                         </md-select>
                         <div ng-messages="contactForm.contactType.$error">
                             <div ng-message="required" translate="contact.typeRequired"></div>
                         </div>
-                    </md-input-container>
+                    <!--</md-input-container>-->
                 </div>
 
                 <md-button type="submit"
-                           ng-click="projectCtr.formContainer()"
+                           ng-click="projectCtr.saveProject()"
                            class="project__btn">
                     <md-icon translate="icons.add"></md-icon>
                 </md-button>

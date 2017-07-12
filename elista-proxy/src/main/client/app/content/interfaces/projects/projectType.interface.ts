@@ -4,7 +4,7 @@ module employees {
     'use strict';
 
     export interface IProjectType {
-        projectStatus: string;
+        projectStatus: String;
     }
 
 }
