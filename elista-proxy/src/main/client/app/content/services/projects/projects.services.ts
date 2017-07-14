@@ -54,7 +54,7 @@ module employees {
         };
 
         public deleteProjectDetail (id: number): ng.IHttpPromise<IProjects> {
-            return this.$resource(`${this.ConfigService.getHost()}/employee/project/delete?id=:id`, {
+            return this.$resource(`${this.ConfigService.getHost()}/employee/project/deleteOne?id=:id`, {
                 id: id,
             }, {
                 'query': {

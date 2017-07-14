@@ -76,14 +76,27 @@ module employees {
 
         private saveProject = () => {
             this.projectNew.employeeId = this.employeeId;
-            this.ProjectService.saveProject(this.projectNew).then(this.saveContactCallBack);
+            this.ProjectService.saveProject(this.projectNew).then(this.saveProjectCallBack);
         };
 
-        private saveContactCallBack = (response) => {
+        private saveProjectCallBack = (response) => {
             this.formContainerVisible = false;
             this.init();
             this.projectNew.projectName = defaultStatus;
             this.projectNew.status = defaultStatus;
+        };
+
+        private deleteProjectId(id: number) {
+            this.ProjectService.deleteProjectDetail(id).then(this.projectDeleteCallBack);
+
+        };
+
+        private projectDeleteCallBack = (res) => {
+            this.init();
+        };
+
+        private back() {
+            this.formContainerVisible = false;
         };
 
         private formContainer() {

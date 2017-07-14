@@ -85,19 +85,6 @@ public class EmployeeServiceImpl implements IEmployeeService {
         pOBList.add(employeeConverter.dtoToOb(new EmployeeDTO(null, "Damian", "Rabczewski", EPosition.FrontEndDeveloper, "../images/avatar1.jpg")));
         pOBList.add(employeeConverter.dtoToOb(new EmployeeDTO(null, "Stonoga", "Rabczewski", EPosition.BackEndDeveloper, "../images/avatar2.jpg")));
         pOBList.add(employeeConverter.dtoToOb(new EmployeeDTO(null, "Damian", "Rabczewski", EPosition.FrontEndDeveloper, "../images/avatar3.jpg")));
-        pOBList.add(employeeConverter.dtoToOb(new EmployeeDTO(null, "Damian", "Rabczewski", EPosition.BackEndDeveloper, "../images/avatar.jpg")));
-        pOBList.add(employeeConverter.dtoToOb(new EmployeeDTO(null, "Damian", "Krzychu", EPosition.FrontEndDeveloper, "../images/avatar1.jpg")));
-        pOBList.add(employeeConverter.dtoToOb(new EmployeeDTO(null, "Damian", "Rabczewski", EPosition.BackEndDeveloper, "../images/avatar2.jpg")));
-        pOBList.add(employeeConverter.dtoToOb(new EmployeeDTO(null, "Damian", "Rabczewski", EPosition.FrontEndDeveloper, "../images/avatar3.jpg")));
-        pOBList.add(employeeConverter.dtoToOb(new EmployeeDTO(null, "Damian", "Rabczewski", EPosition.BackEndDeveloper, "../images/avatar1.jpg")));
-        pOBList.add(employeeConverter.dtoToOb(new EmployeeDTO(null, "Damian", "Rabczewski", EPosition.FrontEndDeveloper, "../images/avatar1.jpg")));
-        pOBList.add(employeeConverter.dtoToOb(new EmployeeDTO(null, "Damian", "Rabczewski", EPosition.BackEndDeveloper, "../images/avatar2.jpg")));
-        pOBList.add(employeeConverter.dtoToOb(new EmployeeDTO(null, "Damian", "Rabczewski", EPosition.BackEndDeveloper, "../images/avatar3.jpg")));
-        pOBList.add(employeeConverter.dtoToOb(new EmployeeDTO(null, "Damian", "Rabczewski", EPosition.FrontEndDeveloper, "../images/avatar.jpg")));
-        pOBList.add(employeeConverter.dtoToOb(new EmployeeDTO(null, "Damian", "Rabczewski", EPosition.BackEndDeveloper, "../images/avatar1.jpg")));
-        pOBList.add(employeeConverter.dtoToOb(new EmployeeDTO(null, "Damian", "Rabczewski", EPosition.BackEndDeveloper, "../images/avatar2.jpg")));
-        pOBList.add(employeeConverter.dtoToOb(new EmployeeDTO(null, "Damian", "Rabczewski", EPosition.BackEndDeveloper, "../images/avatar3.jpg")));
-        pOBList.add(employeeConverter.dtoToOb(new EmployeeDTO(null, "Damian", "Rabczewski", EPosition.BackEndDeveloper, "../images/avatar1.jpg")));
         pOBList = employeeRepository.save(pOBList);
         return employeeConverter.obListToDtoList(pOBList);
     }

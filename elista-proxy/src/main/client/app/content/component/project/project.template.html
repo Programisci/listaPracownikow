@@ -12,13 +12,16 @@
 
 
                         <div  class="main__item project__item" ng-click="null">
+
                             <div class="project__name" layout="column">
                                 {{item.projectName}}
                             </div>
                             <img class="project__img" src="../images/mainten.png" alt="dev">
                             <div class="project__status">{{item.status}}</div>
                         </div>
-
+                        <md-icon class="project__delete"
+                                 ng-click="projectCtr.deleteProjectId(item.id)"
+                                 translate="icons.close"></md-icon>
                     </div>
                 </div>
 
@@ -34,7 +37,9 @@
                             <img class="project__img" src="../images/dev.png" alt="dev">
                             <div class="project__status">{{item.status}}</div>
                         </div>
-
+                        <md-icon class="project__delete"
+                                 ng-click="projectCtr.deleteProjectId(item.id)"
+                                 translate="icons.close"></md-icon>
                     </div>
                 </div>
 
@@ -49,7 +54,9 @@
                             </div>
                             <img class="project__img" src="../images/roll.png" alt="dev">
                             <div class="project__status">{{item.status}}</div>
-
+                            <md-icon class="project__delete"
+                                     ng-click="projectCtr.deleteProjectId(item.id)"
+                                     translate="icons.close"></md-icon>
                         </div>
 
                     </div>
@@ -66,7 +73,9 @@
                             </div>
                             <img class="project__img" src="../images/close.png" alt="dev">
                             <div class="project__status">{{item.status}}</div>
-
+                            <md-icon class="project__delete"
+                                     ng-click="projectCtr.deleteProjectId(item.id)"
+                                     translate="icons.close"></md-icon>
                         </div>
 
                     </div>
@@ -83,7 +92,9 @@
                             </div>
                             <img class="project__img" src="../images/concept.png" alt="dev">
                             <div class="project__status">{{item.status}}</div>
-
+                            <md-icon class="project__delete"
+                                     ng-click="projectCtr.deleteProjectId(item.id)"
+                                     translate="icons.close"></md-icon>
                         </div>
 
                     </div>
@@ -135,7 +146,11 @@
                         </div>
                     <!--</md-input-container>-->
                 </div>
-
+                <md-button class="contact__back"
+                           ng-click="projectCtr.back()"
+                           type="submit">
+                    <md-icon translate="icons.back"></md-icon>
+                </md-button>
                 <md-button type="submit"
                            ng-click="projectCtr.saveProject()"
                            class="project__btn">
