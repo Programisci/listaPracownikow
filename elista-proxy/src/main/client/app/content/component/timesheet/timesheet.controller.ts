@@ -39,6 +39,7 @@ module employees {
                 if (this.timesheetArray[i].employeeId == this.employeeId){
                     this.timesheetArray[i].startDate =  this.timesheetArray[i].startDate * 1000;
                     this.timesheetArray[i].endDate =  this.timesheetArray[i].endDate * 1000;
+                    this.timesheetArray[i].workDate =  this.timesheetArray[i].workDate * 1000;
                     this.timesheetEmployeeArray.push(this.timesheetArray[i]);
                 }
             }
@@ -49,14 +50,17 @@ module employees {
             this.timesheetNew.employeeId = this.employeeId;
             this.timesheetNew.startDate = this.timesheetNew.startDate / 1000;
             this.timesheetNew.endDate = this.timesheetNew.endDate / 1000;
+            this.timesheetNew.workDate = this.timesheetNew.workDate / 1000;
             this.TimesheetService.saveTimesheet(this.timesheetNew).then(this.saveTimesheetCallBack);
         };
 
         private saveTimesheetCallBack = (response) => {
             this.formContainerVisible = false;
+            this.timesheetNew.workDate = null;
+            this.timesheetNew.startDate = null;
+            this.timesheetNew.endDate = null;
+            this.timesheetNew.workplace = defaultStatus;
             this.init();
-            // this.projectNew.projectName = defaultStatus;
-            // this.projectNew.status = defaultStatus;
         };
 
         private deleteTimesheetId(id: number) {
@@ -68,21 +72,18 @@ module employees {
             this.init();
         };
 
-        private show(){
-            var x = new Date(this.myDate * 1000);
-            console.log(this.myDate + "   asdsad" + x);
-        };
         private back() {
             this.formContainerVisible = false;
-            // this.addNewSkill.skillName = defaultStatus;
-            // this.addNewSkill.description = defaultStatus;
+            this.timesheetNew.workDate = null;
+            this.timesheetNew.startDate = null;
+            this.timesheetNew.endDate = null;
+            this.timesheetNew.workplace = defaultStatus;
         };
 
         private formContainer() {
 
             this.formContainerVisible = !this.formContainerVisible;
-            // this.addNewSkill.skillName = defaultStatus;
-            // this.addNewSkill.description = defaultStatus;
+
         };
 
     }

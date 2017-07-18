@@ -7,7 +7,7 @@
             <label translate="time.timeTitle"></label>
         </div>
         <div class="md-card-header timesheet__top">
-            <!--<div class="timesheet__text" translate="time.date"></div>-->
+            <div class="timesheet__text" translate="time.date"></div>
 
             <div class="timesheet__text" translate="time.fromTime"></div>
 
@@ -19,10 +19,13 @@
                 <div layout="column">
                     <div class="timesheet__top">
                         <div class="timesheet__cel">
-                            {{time.startDate | date: 'dd/MM/yy HH:mm'}}
+                            {{time.workDate | date: 'dd/MM/yy'}}
                         </div>
                         <div class="timesheet__cel">
-                            {{time.endDate | date: 'dd/MM HH:mm'}}
+                            {{time.startDate | date: 'HH:mm'}}
+                        </div>
+                        <div class="timesheet__cel">
+                            {{time.endDate | date: 'HH:mm'}}
 
                         </div>
 
@@ -31,30 +34,14 @@
 
                         </div>
                     </div>
+
                 </div>
                 <md-icon class="timesheet__btn"
                          ng-click="timesheetCtr.deleteTimesheetId(time.id)"
                          translate="icons.close"></md-icon>
+
             </div>
-            <md-divider></md-divider>
 
-            <!--<md-input-container style="width: 90%;">-->
-                <!--<label>Podaj date</label>-->
-                <!--<md-datepicker style="width: 90%;"-->
-                                <!--ng-model="timesheetCtr.myDate"-->
-                               <!--name="dateField"-->
-                               <!--md-open-on-focus></md-datepicker>-->
-
-                <!--<div ng-messages="myForm.dateField.$error">-->
-                    <!--<div ng-message="valid">The entered value is not a date!</div>-->
-                    <!--<div ng-message="required">This date is required!</div>-->
-                    <!--<div ng-message="mindate">Date is too early!</div>-->
-                    <!--<div ng-message="maxdate">Date is too late!</div>-->
-                <!--</div>-->
-            <!--</md-input-container>-->
-<!--{{timesheetCtr.myDate | date: 'short'}}-->
-            <!--<md-button><md-icon ng-click="timesheetCtr.show()">add</md-icon></md-button>-->
-        <!--</div>-->
         </div>
 
         <md-button ng-click="timesheetCtr.formContainer()" class="project__btn">
@@ -84,25 +71,32 @@
                     </div>
                     </md-input-container>
                 </div>
-                <!--<md-input-container>-->
-                <!--<label>Podaj date</label>-->
-                <!--<md-datepicker ng-model="timesheetCtr.timesheetNew.startDate"-->
-                                <!--name="dateField"-->
-                               <!--class="piker"-->
-                               <!--type="time"-->
-                               <!--step="1"-->
-                                <!--md-open-on-focus></md-datepicker>-->
+                <div class="timesheet__workDay">
 
-                <!--<div ng-messages="myForm.dateField.$error">-->
-                <!--<div ng-message="valid">The entered value is not a date!</div>-->
-                <!--<div ng-message="required">This date is required!</div>-->
-                <!--<div ng-message="mindate">Date is too early!</div>-->
-                <!--<div ng-message="maxdate">Date is too late!</div>-->
-                <!--</div>-->
-                <!--</md-input-container>-->
-                <input ng-model="timesheetCtr.timesheetNew.startDate" type="time" name="timestamp" step="1">
-                <input ng-model="timesheetCtr.timesheetNew.endDate" type="time" name="timestamp" step="1">
-                {{timesheetCtr.timesheetNew.startDate}}
+                <mdp-date-picker name="minMaxDate"
+                                     mdp-placeholder="Dzień pracy"
+                                     mdp-min-date="'2017-07-01'"
+                                     ng-model="timesheetCtr.timesheetNew.workDate">
+                        <div ng-messages="demoForm.minMaxDate.$error">
+                            <div ng-message="required">This is required</div>
+                            <div ng-message="format">Invalid format</div>
+                            <div ng-message="minDate">Min date</div>
+                            <div ng-message="maxDate">Max date</div>
+                        </div>
+                    </mdp-date-picker>
+                </div>
+                <div flex="50" style="float: left;">
+                    <mdp-time-picker mdp-auto-switch="true"
+                                     mdp-placeholder="Początek"
+                                     ng-model="timesheetCtr.timesheetNew.startDate"
+                                     type="time" name="startDate" step="1"></mdp-time-picker>
+                </div>
+                <div flex="50" style="float: left;">
+                    <mdp-time-picker mdp-auto-switch="true"
+                                     mdp-placeholder="Koniec"
+                                     ng-model="timesheetCtr.timesheetNew.endDate"
+                                     type="time" name="endDate" step="1"></mdp-time-picker>
+                </div>
 
                 <md-button class="contact__back"
                            ng-click="timesheetCtr.back()"
