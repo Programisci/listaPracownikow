@@ -4,6 +4,9 @@
     "date": "Data",
     "fromTime": "Praca od",
     "toTime": "Praca do",
-    "where": "Gdzie"
+    "where": "Gdzie",
+    "title": "Dodaj godziny",
+    "workplaceRequired": "Miejsce pracy jest wymagane.",
+    "workplace": "Miejsce pracy"
   }
 }

@@ -67,39 +67,7 @@ module employees {
     'LocalStorageModule',
     'angularMoment',
     'agGrid',
-    'infinite-scroll'
-  ]);
-}
-module employees {
-
-  'use strict';
-
-  declare let agGrid: any;
-  agGrid.initialiseAgGridWithAngular1(angular);
-  angular.module('employees', [
-    'config',
-    'ngAnimate',
-    'ngAria',
-    'ngCookies',
-    'ngMessages',
-    'ngResource',
-    'ngRoute',
-    'ngSanitize',
-    'ui.router',
-    'ngMaterial',
-    'ngStorage',
-    'blockUI',
-    'ui.utils',
-    'rzModule',
-    'ui.bootstrap',
-    'ngFileUpload',
-    'ngTagsInput',
-    'ngFileSaver',
-    'ui.mask',
-    'pascalprecht.translate',
-    'LocalStorageModule',
-    'angularMoment',
-    'agGrid',
-    'infinite-scroll'
+    'infinite-scroll',
+    'mdPickers'
   ]);
 }

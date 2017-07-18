@@ -11,7 +11,7 @@ module employees {
     const TimesheetComponent: ng.IComponentOptions = {
         bindings: {},
         controller: TimesheetCtrl,
-        controllerAs: 'timesheet',
+        controllerAs: 'timesheetCtr',
         templateUrl: 'content/component/timesheet/timesheet.template.html'
     };
 

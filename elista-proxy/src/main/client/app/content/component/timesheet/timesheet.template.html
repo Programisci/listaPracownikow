@@ -1,8 +1,8 @@
 
 <div class="timesheet__box">
 
-    <md-card class="timesheet__overflow" >
-
+    <md-card class="timesheet__relativeBox" >
+        <div class="timesheet__content">
         <div class="timesheet__title header__main md-headline">
             <label translate="time.timeTitle"></label>
         </div>
@@ -15,828 +15,101 @@
 
             <div class="timesheet__text" translate="time.where"></div>
         </div>
-        <div class="timesheet__content">
-            <div class="timesheet__item"  ng-click="null">
+            <div ng-repeat="time in timesheetCtr.timesheetEmployeeArray" class="timesheet__item"  ng-click="null">
                 <div layout="column">
                     <div class="timesheet__top">
                         <div class="timesheet__cel">
-                            13.05.2017
+                            {{time.workDate | date: 'dd/MM/yy'}}
                         </div>
                         <div class="timesheet__cel">
-                            7:00
+                            {{time.startDate | date: 'HH:mm'}}
                         </div>
                         <div class="timesheet__cel">
-                            16:00
-                        </div>
-                        <div class="timesheet__cel">
-                            Zdalnie
-                        </div>
-                    </div>
-                </div>
-                <md-icon class="timesheet__btn">mode_edit</md-icon>
-            </div>
-            <md-divider></md-divider>
-            <div class="timesheet__item"  ng-click="null">
-                <div layout="column">
-                    <div class="timesheet__top">
-                        <div class="timesheet__cel">
-                            11.05.2017
-                        </div>
-                        <div class="timesheet__cel">
-                            9:00
-                        </div>
-                        <div class="timesheet__cel">
-                            13:00
-                        </div>
-                        <div class="timesheet__cel">
-                            Biuro
-                        </div>
-                    </div>
-                </div>
-                <md-icon class="timesheet__btn">mode_edit</md-icon>
-            </div>
-            <md-divider></md-divider>
+                            {{time.endDate | date: 'HH:mm'}}
 
-            <div class="timesheet__item"  ng-click="null">
-                <div layout="column">
-                    <div class="timesheet__top">
-                        <div class="timesheet__cel">
-                            09.05.2017
                         </div>
-                        <div class="timesheet__cel">
-                            5:00
-                        </div>
-                        <div class="timesheet__cel">
-                            11:00
-                        </div>
-                        <div class="timesheet__cel">
-                            Biuro
-                        </div>
-                    </div>
-                </div>
-                <md-icon class="timesheet__btn">mode_edit</md-icon>
-            </div>
-            <md-divider></md-divider>
 
-            <div class="timesheet__item"  ng-click="null">
-                <div layout="column">
-                    <div class="timesheet__top">
                         <div class="timesheet__cel">
-                            05.05.2017
-                        </div>
-                        <div class="timesheet__cel">
-                            5:00
-                        </div>
-                        <div class="timesheet__cel">
-                            11:00
-                        </div>
-                        <div class="timesheet__cel">
-                            Zdalnie
-                        </div>
-                    </div>
-                </div>
-                <md-icon class="timesheet__btn">mode_edit</md-icon>
-            </div>
-            <md-divider></md-divider>
-            <div class="timesheet__item"  ng-click="null">
-                <div layout="column">
-                    <div class="timesheet__top">
-                        <div class="timesheet__cel">
-                            13.05.2017
-                        </div>
-                        <div class="timesheet__cel">
-                            7:00
-                        </div>
-                        <div class="timesheet__cel">
-                            16:00
-                        </div>
-                        <div class="timesheet__cel">
-                            Zdalnie
-                        </div>
-                    </div>
-                </div>
-                <md-icon class="timesheet__btn">mode_edit</md-icon>
-            </div>
-            <md-divider></md-divider>
-            <div class="timesheet__item"  ng-click="null">
-                <div layout="column">
-                    <div class="timesheet__top">
-                        <div class="timesheet__cel">
-                            11.05.2017
-                        </div>
-                        <div class="timesheet__cel">
-                            9:00
-                        </div>
-                        <div class="timesheet__cel">
-                            13:00
-                        </div>
-                        <div class="timesheet__cel">
-                            Biuro
-                        </div>
-                    </div>
-                </div>
-                <md-icon class="timesheet__btn">mode_edit</md-icon>
-            </div>
-            <md-divider></md-divider>
+                            {{time.workplace}}
 
-            <div class="timesheet__item"  ng-click="null">
-                <div layout="column">
-                    <div class="timesheet__top">
-                        <div class="timesheet__cel">
-                            09.05.2017
-                        </div>
-                        <div class="timesheet__cel">
-                            5:00
-                        </div>
-                        <div class="timesheet__cel">
-                            11:00
-                        </div>
-                        <div class="timesheet__cel">
-                            Biuro
                         </div>
                     </div>
-                </div>
-                <md-icon class="timesheet__btn">mode_edit</md-icon>
-            </div>
-            <md-divider></md-divider>
 
-            <div class="timesheet__item"  ng-click="null">
-                <div layout="column">
-                    <div class="timesheet__top">
-                        <div class="timesheet__cel">
-                            05.05.2017
-                        </div>
-                        <div class="timesheet__cel">
-                            5:00
-                        </div>
-                        <div class="timesheet__cel">
-                            11:00
-                        </div>
-                        <div class="timesheet__cel">
-                            Zdalnie
-                        </div>
-                    </div>
                 </div>
-                <md-icon class="timesheet__btn">mode_edit</md-icon>
-            </div>
-            <md-divider></md-divider>
-            <div class="timesheet__item"  ng-click="null">
-                <div layout="column">
-                    <div class="timesheet__top">
-                        <div class="timesheet__cel">
-                            13.05.2017
-                        </div>
-                        <div class="timesheet__cel">
-                            7:00
-                        </div>
-                        <div class="timesheet__cel">
-                            16:00
-                        </div>
-                        <div class="timesheet__cel">
-                            Zdalnie
-                        </div>
-                    </div>
-                </div>
-                <md-icon class="timesheet__btn">mode_edit</md-icon>
-            </div>
-            <md-divider></md-divider>
-            <div class="timesheet__item"  ng-click="null">
-                <div layout="column">
-                    <div class="timesheet__top">
-                        <div class="timesheet__cel">
-                            11.05.2017
-                        </div>
-                        <div class="timesheet__cel">
-                            9:00
-                        </div>
-                        <div class="timesheet__cel">
-                            13:00
-                        </div>
-                        <div class="timesheet__cel">
-                            Biuro
-                        </div>
-                    </div>
-                </div>
-                <md-icon class="timesheet__btn">mode_edit</md-icon>
-            </div>
-            <md-divider></md-divider>
+                <md-icon class="timesheet__btn"
+                         ng-click="timesheetCtr.deleteTimesheetId(time.id)"
+                         translate="icons.close"></md-icon>
 
-            <div class="timesheet__item"  ng-click="null">
-                <div layout="column">
-                    <div class="timesheet__top">
-                        <div class="timesheet__cel">
-                            09.05.2017
-                        </div>
-                        <div class="timesheet__cel">
-                            5:00
-                        </div>
-                        <div class="timesheet__cel">
-                            11:00
-                        </div>
-                        <div class="timesheet__cel">
-                            Biuro
-                        </div>
-                    </div>
-                </div>
-                <md-icon class="timesheet__btn">mode_edit</md-icon>
             </div>
-            <md-divider></md-divider>
 
-            <div class="timesheet__item"  ng-click="null">
-                <div layout="column">
-                    <div class="timesheet__top">
-                        <div class="timesheet__cel">
-                            05.05.2017
-                        </div>
-                        <div class="timesheet__cel">
-                            5:00
-                        </div>
-                        <div class="timesheet__cel">
-                            11:00
-                        </div>
-                        <div class="timesheet__cel">
-                            Zdalnie
-                        </div>
-                    </div>
-                </div>
-                <md-icon class="timesheet__btn">mode_edit</md-icon>
-            </div>
-            <md-divider></md-divider>
-            <div class="timesheet__item"  ng-click="null">
-                <div layout="column">
-                    <div class="timesheet__top">
-                        <div class="timesheet__cel">
-                            13.05.2017
-                        </div>
-                        <div class="timesheet__cel">
-                            7:00
-                        </div>
-                        <div class="timesheet__cel">
-                            16:00
-                        </div>
-                        <div class="timesheet__cel">
-                            Zdalnie
-                        </div>
-                    </div>
-                </div>
-                <md-icon class="timesheet__btn">mode_edit</md-icon>
-            </div>
-            <md-divider></md-divider>
-            <div class="timesheet__item"  ng-click="null">
-                <div layout="column">
-                    <div class="timesheet__top">
-                        <div class="timesheet__cel">
-                            11.05.2017
-                        </div>
-                        <div class="timesheet__cel">
-                            9:00
-                        </div>
-                        <div class="timesheet__cel">
-                            13:00
-                        </div>
-                        <div class="timesheet__cel">
-                            Biuro
-                        </div>
-                    </div>
-                </div>
-                <md-icon class="timesheet__btn">mode_edit</md-icon>
-            </div>
-            <md-divider></md-divider>
+        </div>
 
-            <div class="timesheet__item"  ng-click="null">
-                <div layout="column">
-                    <div class="timesheet__top">
-                        <div class="timesheet__cel">
-                            09.05.2017
-                        </div>
-                        <div class="timesheet__cel">
-                            5:00
-                        </div>
-                        <div class="timesheet__cel">
-                            11:00
-                        </div>
-                        <div class="timesheet__cel">
-                            Biuro
-                        </div>
-                    </div>
-                </div>
-                <md-icon class="timesheet__btn">mode_edit</md-icon>
-            </div>
-            <md-divider></md-divider>
+        <md-button ng-click="timesheetCtr.formContainer()" class="project__btn">
+            <md-icon translate="icons.edit"></md-icon>
+        </md-button>
 
-            <div class="timesheet__item"  ng-click="null">
-                <div layout="column">
-                    <div class="timesheet__top">
-                        <div class="timesheet__cel">
-                            05.05.2017
-                        </div>
-                        <div class="timesheet__cel">
-                            5:00
-                        </div>
-                        <div class="timesheet__cel">
-                            11:00
-                        </div>
-                        <div class="timesheet__cel">
-                            Zdalnie
-                        </div>
-                    </div>
-                </div>
-                <md-icon class="timesheet__btn">mode_edit</md-icon>
-            </div>
-            <md-divider></md-divider>
-            <div class="timesheet__item"  ng-click="null">
-                <div layout="column">
-                    <div class="timesheet__top">
-                        <div class="timesheet__cel">
-                            13.05.2017
-                        </div>
-                        <div class="timesheet__cel">
-                            7:00
-                        </div>
-                        <div class="timesheet__cel">
-                            16:00
-                        </div>
-                        <div class="timesheet__cel">
-                            Zdalnie
-                        </div>
-                    </div>
-                </div>
-                <md-icon class="timesheet__btn">mode_edit</md-icon>
-            </div>
-            <md-divider></md-divider>
-            <div class="timesheet__item"  ng-click="null">
-                <div layout="column">
-                    <div class="timesheet__top">
-                        <div class="timesheet__cel">
-                            11.05.2017
-                        </div>
-                        <div class="timesheet__cel">
-                            9:00
-                        </div>
-                        <div class="timesheet__cel">
-                            13:00
-                        </div>
-                        <div class="timesheet__cel">
-                            Biuro
-                        </div>
-                    </div>
-                </div>
-                <md-icon class="timesheet__btn">mode_edit</md-icon>
-            </div>
-            <md-divider></md-divider>
+        <div ng-if="timesheetCtr.formContainerVisible">
+            <form name="timesheetForm" class=" timesheet__form" novalidate>
 
-            <div class="timesheet__item"  ng-click="null">
-                <div layout="column">
-                    <div class="timesheet__top">
-                        <div class="timesheet__cel">
-                            09.05.2017
-                        </div>
-                        <div class="timesheet__cel">
-                            5:00
-                        </div>
-                        <div class="timesheet__cel">
-                            11:00
-                        </div>
-                        <div class="timesheet__cel">
-                            Biuro
-                        </div>
-                    </div>
-                </div>
-                <md-icon class="timesheet__btn">mode_edit</md-icon>
-            </div>
-            <md-divider></md-divider>
+                <div class="header__main" translate="time.title"></div>
 
-            <div class="timesheet__item"  ng-click="null">
-                <div layout="column">
-                    <div class="timesheet__top">
-                        <div class="timesheet__cel">
-                            05.05.2017
-                        </div>
-                        <div class="timesheet__cel">
-                            5:00
-                        </div>
-                        <div class="timesheet__cel">
-                            11:00
-                        </div>
-                        <div class="timesheet__cel">
-                            Zdalnie
-                        </div>
-                    </div>
-                </div>
-                <md-icon class="timesheet__btn">mode_edit</md-icon>
-            </div>
-            <md-divider></md-divider>
-            <div class="timesheet__item"  ng-click="null">
-                <div layout="column">
-                    <div class="timesheet__top">
-                        <div class="timesheet__cel">
-                            13.05.2017
-                        </div>
-                        <div class="timesheet__cel">
-                            7:00
-                        </div>
-                        <div class="timesheet__cel">
-                            16:00
-                        </div>
-                        <div class="timesheet__cel">
-                            Zdalnie
-                        </div>
-                    </div>
-                </div>
-                <md-icon class="timesheet__btn">mode_edit</md-icon>
-            </div>
-            <md-divider></md-divider>
-            <div class="timesheet__item"  ng-click="null">
-                <div layout="column">
-                    <div class="timesheet__top">
-                        <div class="timesheet__cel">
-                            11.05.2017
-                        </div>
-                        <div class="timesheet__cel">
-                            9:00
-                        </div>
-                        <div class="timesheet__cel">
-                            13:00
-                        </div>
-                        <div class="timesheet__cel">
-                            Biuro
-                        </div>
-                    </div>
-                </div>
-                <md-icon class="timesheet__btn">mode_edit</md-icon>
-            </div>
-            <md-divider></md-divider>
+                <div layout="column" flex="100">
+                    <md-input-container class="md-block" flex-gt-sm>
+                    <md-select name="workplace"
+                               placeholder="{{ 'time.workplace' | translate }}"
+                               ng-model="timesheetCtr.timesheetNew.workplace"
+                               required>
 
-            <div class="timesheet__item"  ng-click="null">
-                <div layout="column">
-                    <div class="timesheet__top">
-                        <div class="timesheet__cel">
-                            09.05.2017
-                        </div>
-                        <div class="timesheet__cel">
-                            5:00
-                        </div>
-                        <div class="timesheet__cel">
-                            11:00
-                        </div>
-                        <div class="timesheet__cel">
-                            Biuro
-                        </div>
-                    </div>
-                </div>
-                <md-icon class="timesheet__btn">mode_edit</md-icon>
-            </div>
-            <md-divider></md-divider>
+                        <!--<md-option ng-repeat="item in projectCtr.projectType"-->
+                        <!--value="{{item}}">{{item}}</md-option>-->
+                        <md-option value="Biuro">Biuro</md-option>
+                        <md-option value="Zdalnie">Zdalnie</md-option>
 
-            <div class="timesheet__item"  ng-click="null">
-                <div layout="column">
-                    <div class="timesheet__top">
-                        <div class="timesheet__cel">
-                            05.05.2017
-                        </div>
-                        <div class="timesheet__cel">
-                            5:00
-                        </div>
-                        <div class="timesheet__cel">
-                            11:00
-                        </div>
-                        <div class="timesheet__cel">
-                            Zdalnie
-                        </div>
+                    </md-select>
+                    <div ng-messages="timesheetForm.workplace.$error">
+                        <div ng-message="required" translate="time.workplaceRequired"></div>
                     </div>
+                    </md-input-container>
                 </div>
-                <md-icon class="timesheet__btn">mode_edit</md-icon>
-            </div>
-            <md-divider></md-divider>
-            <div class="timesheet__item"  ng-click="null">
-                <div layout="column">
-                    <div class="timesheet__top">
-                        <div class="timesheet__cel">
-                            13.05.2017
-                        </div>
-                        <div class="timesheet__cel">
-                            7:00
-                        </div>
-                        <div class="timesheet__cel">
-                            16:00
-                        </div>
-                        <div class="timesheet__cel">
-                            Zdalnie
-                        </div>
-                    </div>
-                </div>
-                <md-icon class="timesheet__btn">mode_edit</md-icon>
-            </div>
-            <md-divider></md-divider>
-            <div class="timesheet__item"  ng-click="null">
-                <div layout="column">
-                    <div class="timesheet__top">
-                        <div class="timesheet__cel">
-                            11.05.2017
-                        </div>
-                        <div class="timesheet__cel">
-                            9:00
-                        </div>
-                        <div class="timesheet__cel">
-                            13:00
-                        </div>
-                        <div class="timesheet__cel">
-                            Biuro
-                        </div>
-                    </div>
-                </div>
-                <md-icon class="timesheet__btn">mode_edit</md-icon>
-            </div>
-            <md-divider></md-divider>
+                <div class="timesheet__workDay">
 
-            <div class="timesheet__item"  ng-click="null">
-                <div layout="column">
-                    <div class="timesheet__top">
-                        <div class="timesheet__cel">
-                            09.05.2017
+                <mdp-date-picker name="minMaxDate"
+                                     mdp-placeholder="Dzień pracy"
+                                     mdp-min-date="'2017-07-01'"
+                                     ng-model="timesheetCtr.timesheetNew.workDate">
+                        <div ng-messages="demoForm.minMaxDate.$error">
+                            <div ng-message="required">This is required</div>
+                            <div ng-message="format">Invalid format</div>
+                            <div ng-message="minDate">Min date</div>
+                            <div ng-message="maxDate">Max date</div>
                         </div>
-                        <div class="timesheet__cel">
-                            5:00
-                        </div>
-                        <div class="timesheet__cel">
-                            11:00
-                        </div>
-                        <div class="timesheet__cel">
-                            Biuro
-                        </div>
-                    </div>
+                    </mdp-date-picker>
                 </div>
-                <md-icon class="timesheet__btn">mode_edit</md-icon>
-            </div>
-            <md-divider></md-divider>
+                <div flex="50" style="float: left;">
+                    <mdp-time-picker mdp-auto-switch="true"
+                                     mdp-placeholder="Początek"
+                                     ng-model="timesheetCtr.timesheetNew.startDate"
+                                     type="time" name="startDate" step="1"></mdp-time-picker>
+                </div>
+                <div flex="50" style="float: left;">
+                    <mdp-time-picker mdp-auto-switch="true"
+                                     mdp-placeholder="Koniec"
+                                     ng-model="timesheetCtr.timesheetNew.endDate"
+                                     type="time" name="endDate" step="1"></mdp-time-picker>
+                </div>
 
-            <div class="timesheet__item"  ng-click="null">
-                <div layout="column">
-                    <div class="timesheet__top">
-                        <div class="timesheet__cel">
-                            05.05.2017
-                        </div>
-                        <div class="timesheet__cel">
-                            5:00
-                        </div>
-                        <div class="timesheet__cel">
-                            11:00
-                        </div>
-                        <div class="timesheet__cel">
-                            Zdalnie
-                        </div>
-                    </div>
-                </div>
-                <md-icon class="timesheet__btn">mode_edit</md-icon>
-            </div>
-            <md-divider></md-divider>
-            <div class="timesheet__item"  ng-click="null">
-                <div layout="column">
-                    <div class="timesheet__top">
-                        <div class="timesheet__cel">
-                            13.05.2017
-                        </div>
-                        <div class="timesheet__cel">
-                            7:00
-                        </div>
-                        <div class="timesheet__cel">
-                            16:00
-                        </div>
-                        <div class="timesheet__cel">
-                            Zdalnie
-                        </div>
-                    </div>
-                </div>
-                <md-icon class="timesheet__btn">mode_edit</md-icon>
-            </div>
-            <md-divider></md-divider>
-            <div class="timesheet__item"  ng-click="null">
-                <div layout="column">
-                    <div class="timesheet__top">
-                        <div class="timesheet__cel">
-                            11.05.2017
-                        </div>
-                        <div class="timesheet__cel">
-                            9:00
-                        </div>
-                        <div class="timesheet__cel">
-                            13:00
-                        </div>
-                        <div class="timesheet__cel">
-                            Biuro
-                        </div>
-                    </div>
-                </div>
-                <md-icon class="timesheet__btn">mode_edit</md-icon>
-            </div>
-            <md-divider></md-divider>
+                <md-button class="contact__back"
+                           ng-click="timesheetCtr.back()"
+                           type="submit">
+                    <md-icon translate="icons.back"></md-icon>
+                </md-button>
+                <md-button type="submit"
+                           ng-click="timesheetCtr.saveTimesheet()"
+                           class="project__btn">
+                    <md-icon translate="icons.add"></md-icon>
+                </md-button>
 
-            <div class="timesheet__item"  ng-click="null">
-                <div layout="column">
-                    <div class="timesheet__top">
-                        <div class="timesheet__cel">
-                            09.05.2017
-                        </div>
-                        <div class="timesheet__cel">
-                            5:00
-                        </div>
-                        <div class="timesheet__cel">
-                            11:00
-                        </div>
-                        <div class="timesheet__cel">
-                            Biuro
-                        </div>
-                    </div>
-                </div>
-                <md-icon class="timesheet__btn">mode_edit</md-icon>
-            </div>
-            <md-divider></md-divider>
-
-            <div class="timesheet__item"  ng-click="null">
-                <div layout="column">
-                    <div class="timesheet__top">
-                        <div class="timesheet__cel">
-                            05.05.2017
-                        </div>
-                        <div class="timesheet__cel">
-                            5:00
-                        </div>
-                        <div class="timesheet__cel">
-                            11:00
-                        </div>
-                        <div class="timesheet__cel">
-                            Zdalnie
-                        </div>
-                    </div>
-                </div>
-                <md-icon class="timesheet__btn">mode_edit</md-icon>
-            </div>
-            <md-divider></md-divider>
-            <div class="timesheet__item"  ng-click="null">
-                <div layout="column">
-                    <div class="timesheet__top">
-                        <div class="timesheet__cel">
-                            13.05.2017
-                        </div>
-                        <div class="timesheet__cel">
-                            7:00
-                        </div>
-                        <div class="timesheet__cel">
-                            16:00
-                        </div>
-                        <div class="timesheet__cel">
-                            Zdalnie
-                        </div>
-                    </div>
-                </div>
-                <md-icon class="timesheet__btn">mode_edit</md-icon>
-            </div>
-            <md-divider></md-divider>
-            <div class="timesheet__item"  ng-click="null">
-                <div layout="column">
-                    <div class="timesheet__top">
-                        <div class="timesheet__cel">
-                            11.05.2017
-                        </div>
-                        <div class="timesheet__cel">
-                            9:00
-                        </div>
-                        <div class="timesheet__cel">
-                            13:00
-                        </div>
-                        <div class="timesheet__cel">
-                            Biuro
-                        </div>
-                    </div>
-                </div>
-                <md-icon class="timesheet__btn">mode_edit</md-icon>
-            </div>
-            <md-divider></md-divider>
-
-            <div class="timesheet__item"  ng-click="null">
-                <div layout="column">
-                    <div class="timesheet__top">
-                        <div class="timesheet__cel">
-                            09.05.2017
-                        </div>
-                        <div class="timesheet__cel">
-                            5:00
-                        </div>
-                        <div class="timesheet__cel">
-                            11:00
-                        </div>
-                        <div class="timesheet__cel">
-                            Biuro
-                        </div>
-                    </div>
-                </div>
-                <md-icon class="timesheet__btn">mode_edit</md-icon>
-            </div>
-            <md-divider></md-divider>
-
-            <div class="timesheet__item"  ng-click="null">
-                <div layout="column">
-                    <div class="timesheet__top">
-                        <div class="timesheet__cel">
-                            05.05.2017
-                        </div>
-                        <div class="timesheet__cel">
-                            5:00
-                        </div>
-                        <div class="timesheet__cel">
-                            11:00
-                        </div>
-                        <div class="timesheet__cel">
-                            Zdalnie
-                        </div>
-                    </div>
-                </div>
-                <md-icon class="timesheet__btn">mode_edit</md-icon>
-            </div>
-            <md-divider></md-divider>
-            <div class="timesheet__item"  ng-click="null">
-                <div layout="column">
-                    <div class="timesheet__top">
-                        <div class="timesheet__cel">
-                            13.05.2017
-                        </div>
-                        <div class="timesheet__cel">
-                            7:00
-                        </div>
-                        <div class="timesheet__cel">
-                            16:00
-                        </div>
-                        <div class="timesheet__cel">
-                            Zdalnie
-                        </div>
-                    </div>
-                </div>
-                <md-icon class="timesheet__btn">mode_edit</md-icon>
-            </div>
-            <md-divider></md-divider>
-            <div class="timesheet__item"  ng-click="null">
-                <div layout="column">
-                    <div class="timesheet__top">
-                        <div class="timesheet__cel">
-                            11.05.2017
-                        </div>
-                        <div class="timesheet__cel">
-                            9:00
-                        </div>
-                        <div class="timesheet__cel">
-                            13:00
-                        </div>
-                        <div class="timesheet__cel">
-                            Biuro
-                        </div>
-                    </div>
-                </div>
-                <md-icon class="timesheet__btn">mode_edit</md-icon>
-            </div>
-            <md-divider></md-divider>
-
-            <div class="timesheet__item"  ng-click="null">
-                <div layout="column">
-                    <div class="timesheet__top">
-                        <div class="timesheet__cel">
-                            09.05.2017
-                        </div>
-                        <div class="timesheet__cel">
-                            5:00
-                        </div>
-                        <div class="timesheet__cel">
-                            11:00
-                        </div>
-                        <div class="timesheet__cel">
-                            Biuro
-                        </div>
-                    </div>
-                </div>
-                <md-icon class="timesheet__btn">mode_edit</md-icon>
-            </div>
-            <md-divider></md-divider>
-
-            <div class="timesheet__item"  ng-click="null">
-                <div layout="column">
-                    <div class="timesheet__top">
-                        <div class="timesheet__cel">
-                            05.05.2017
-                        </div>
-                        <div class="timesheet__cel">
-                            5:00
-                        </div>
-                        <div class="timesheet__cel">
-                            11:00
-                        </div>
-                        <div class="timesheet__cel">
-                            Zdalnie
-                        </div>
-                    </div>
-                </div>
-                <md-icon class="timesheet__btn">mode_edit</md-icon>
-            </div>
-            <md-divider></md-divider>
-
+            </form>
         </div>
 
     </md-card>

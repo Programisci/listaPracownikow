@@ -1,59 +1,161 @@
 <div class="project__box">
 
-    <md-card>
+    <md-card class="project__relative">
 
-        <md-content>
-            <md-tabs md-dynamic-height md-border-bottom>
-                <md-tab label="Aktualne">
-                    <md-content class="main__item">
+        <md-content class="project__view">
+            <div class="skills__title header__main md-headline" translate="project.name"></div>
+            <div >
 
-                        <md-list-item ng-click="null">
-                            <div layout="column">
-                                Projekt Relion
+                <div label="{{ 'project.Maintenance' | translate }}">
+                    <div ng-repeat="item in projectCtr.projectsArrayMaintenance"
+                         class="project__white">
+
+
+                        <div  class="main__item project__item" ng-click="null">
+
+                            <div class="project__name" layout="column">
+                                {{item.projectName}}
                             </div>
-                        </md-list-item>
-                        <md-list-item ng-click="null">
-                            <div class="md-list-item-text" layout="column">
-                                Projekt employees
+                            <img class="project__img" src="../images/mainten.png" alt="dev">
+                            <div class="project__status">{{item.status}}</div>
+                        </div>
+                        <md-icon class="project__delete"
+                                 ng-click="projectCtr.deleteProjectId(item.id)"
+                                 translate="icons.close"></md-icon>
+                    </div>
+                </div>
+
+                <div label="{{ 'project.Development' | translate }}">
+                    <div ng-repeat="item in projectCtr.projectsArrayDevelop"
+                         class="project__white">
+
+
+                        <div  class="main__item project__item" ng-click="null">
+                            <div class="project__name" layout="column">
+                                {{item.projectName}}
                             </div>
-                        </md-list-item>
+                            <img class="project__img" src="../images/dev.png" alt="dev">
+                            <div class="project__status">{{item.status}}</div>
+                        </div>
+                        <md-icon class="project__delete"
+                                 ng-click="projectCtr.deleteProjectId(item.id)"
+                                 translate="icons.close"></md-icon>
+                    </div>
+                </div>
 
-                    </md-content>
-                </md-tab>
-                <md-tab label="Archiwalne">
-                    <md-content class="md-padding">
+                <div label="{{ 'project.Rollout' | translate }}">
+                    <div ng-repeat="item in projectCtr.projectsArrayRollout"
+                         class="project__white">
 
-                        <md-list-item ng-click="null">
-                            <div style="color: lightgray;" class="md-list-item-text" layout="column">
-                                Projekt Relion
+
+                        <div  class="main__item project__item" ng-click="null">
+                            <div class="project__name" layout="column">
+                                {{item.projectName}}
                             </div>
-                        </md-list-item>
+                            <img class="project__img" src="../images/roll.png" alt="dev">
+                            <div class="project__status">{{item.status}}</div>
+                            <md-icon class="project__delete"
+                                     ng-click="projectCtr.deleteProjectId(item.id)"
+                                     translate="icons.close"></md-icon>
+                        </div>
 
-                    </md-content>
-                </md-tab>
-            </md-tabs>
+                    </div>
+                </div>
+
+                <div label="{{ 'project.Closure' | translate }}">
+                    <div ng-repeat="item in projectCtr.projectsArrayClosure"
+                         class="project__white">
+
+
+                        <div  class="main__item project__item" ng-click="null">
+                            <div class="project__name" layout="column">
+                                {{item.projectName}}
+                            </div>
+                            <img class="project__img" src="../images/close.png" alt="dev">
+                            <div class="project__status">{{item.status}}</div>
+                            <md-icon class="project__delete"
+                                     ng-click="projectCtr.deleteProjectId(item.id)"
+                                     translate="icons.close"></md-icon>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div label="{{ 'project.ConceptualFramework' | translate }}">
+                    <div ng-repeat="item in projectCtr.projectsArrayConceptual"
+                         class="project__white">
+
+
+                        <div  class="main__item project__item" ng-click="null">
+                            <div class="project__name" layout="column">
+                                {{item.projectName}}
+                            </div>
+                            <img class="project__img" src="../images/concept.png" alt="dev">
+                            <div class="project__status">{{item.status}}</div>
+                            <md-icon class="project__delete"
+                                     ng-click="projectCtr.deleteProjectId(item.id)"
+                                     translate="icons.close"></md-icon>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
         </md-content>
 
-        <div ng-if="detail.formContainerVisible">
-            <form projectForm>
+        <md-button ng-click="projectCtr.formContainer()" class="project__btn">
+            <md-icon translate="icons.edit"></md-icon>
+        </md-button>
+
+        <div ng-if="projectCtr.formContainerVisible">
+            <form name="projectForm" class="project__form" novalidate>
+
+                <div class="header__main" translate="project.addProject"></div>
+
                 <div layout="column" flex="100">
                     <md-input-container flex="50">
-                        <label>Nazwa projektu</label>
-                        <input required name="clientName" ng-model="detail.employees[0].name">
-                        <div ng-messages="detailForm.clientName.$error">
-                            <div ng-message="required">Twój projekt jest wymagane.</div>
+                        <input required
+                               placeholder="{{'project.projectName' | translate }}"
+                               ng-model="projectCtr.projectNew.projectName"
+                               name="projekt">
+                        <div ng-messages="projectForm.projekt.$error">
+                            <div ng-message="required" translate="project.nameRequired"></div>
                         </div>
                     </md-input-container>
                 </div>
+
                 <div layout="column" flex="100">
-                    <md-input-container flex="50">
-                        <label>Imię</label>
-                        <input required name="clientName" ng-model="detail.employees[0].name">
-                        <div ng-messages="detailForm.clientName.$error">
-                            <div ng-message="required">Twoje imię jest wymagane.</div>
+                    <md-input-container class="md-block" flex-gt-sm>
+                        <md-select name="status"
+                                   placeholder="{{ 'project.choose' | translate }}"
+                                   ng-model="projectCtr.projectNew.status"
+                                   required>
+
+                            <!--<md-option ng-repeat="item in projectCtr.projectType"-->
+                                       <!--value="{{item}}">{{item}}</md-option>-->
+                            <md-option value="MAINTENANCE">MAINTENANCE</md-option>
+                            <md-option value="CONCEPTUAL_FRAMEWORK">CONCEPTUAL_FRAMEWORK</md-option>
+                            <md-option value="DEVELOPMENT">DEVELOPMENT</md-option>
+                            <md-option value="ROLLOUT">ROLLOUT</md-option>
+                            <md-option value="CLOSURE">CLOSURE</md-option>
+
+                        </md-select>
+                        <div ng-messages="projectForm.status.$error">
+                            <div ng-message="required" translate="project.typeRequired"></div>
                         </div>
                     </md-input-container>
                 </div>
+                <md-button class="contact__back"
+                           ng-click="projectCtr.back()"
+                           type="submit">
+                    <md-icon translate="icons.back"></md-icon>
+                </md-button>
+                <md-button type="submit"
+                           ng-click="projectCtr.saveProject()"
+                           class="project__btn">
+                    <md-icon translate="icons.add"></md-icon>
+                </md-button>
+
             </form>
         </div>
 
