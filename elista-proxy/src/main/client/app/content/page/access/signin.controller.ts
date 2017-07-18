@@ -27,6 +27,7 @@ module employees {
        this.EmployeeBackService.getInitContact().then(this.getEmployeeInitCallBack);
        this.EmployeeBackService.getInitProject().then(this.getEmployeeInitCallBack);
        this.EmployeeBackService.getInitSkill().then(this.getEmployeeInitCallBack);
+       this.EmployeeBackService.getInitTimesheet().then(this.getEmployeeInitCallBack);
        this.addDataBase == false;
      };
 

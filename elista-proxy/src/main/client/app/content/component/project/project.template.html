@@ -106,7 +106,6 @@
         <md-button ng-click="projectCtr.formContainer()" class="project__btn">
             <md-icon translate="icons.edit"></md-icon>
         </md-button>
-        </md-content>
 
         <div ng-if="projectCtr.formContainerVisible">
             <form name="projectForm" class="project__form" novalidate>
@@ -126,9 +125,9 @@
                 </div>
 
                 <div layout="column" flex="100">
-                    <!--<md-input-container class="md-block" flex-gt-sm>-->
+                    <md-input-container class="md-block" flex-gt-sm>
                         <md-select name="status"
-                                   placeholder="{{ 'contact.typeContact' | translate }}"
+                                   placeholder="{{ 'project.choose' | translate }}"
                                    ng-model="projectCtr.projectNew.status"
                                    required>
 
@@ -141,10 +140,10 @@
                             <md-option value="CLOSURE">CLOSURE</md-option>
 
                         </md-select>
-                        <div ng-messages="contactForm.contactType.$error">
-                            <div ng-message="required" translate="contact.typeRequired"></div>
+                        <div ng-messages="projectForm.status.$error">
+                            <div ng-message="required" translate="project.typeRequired"></div>
                         </div>
-                    <!--</md-input-container>-->
+                    </md-input-container>
                 </div>
                 <md-button class="contact__back"
                            ng-click="projectCtr.back()"

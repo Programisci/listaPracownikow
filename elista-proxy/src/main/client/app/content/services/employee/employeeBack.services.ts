@@ -12,6 +12,7 @@ module employees {
         getInitContact ();
         getInitProject ();
         getInitSkill ();
+        getInitTimesheet ();
 
     }
 
@@ -56,6 +57,15 @@ module employees {
         };
         public getInitSkill () {
             return this.$resource(`${this.ConfigService.getHost()}/employee/initSkill`, {}, {
+                'query': {
+                    method: 'GET',
+                    isArray: true
+                }
+            }).query({}).$promise
+
+        };
+        public getInitTimesheet () {
+            return this.$resource(`${this.ConfigService.getHost()}/employee/initTimesheet`, {}, {
                 'query': {
                     method: 'GET',
                     isArray: true

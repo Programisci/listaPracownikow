@@ -5,11 +5,11 @@
     "Rollout": "Wdrożenie",
     "Development": "Development",
     "ConceptualFramework": "Ramy koncepcyjne",
-    "nameRequired": "Twój projekt jest wymagany.",
+    "nameRequired": "Nazwa projektu jest wymagana.",
     "typeRequired": "Typ projektu jest wymagany",
     "choose": "Wybierz rodzaj",
     "addProject": "Dodaj projekt: ",
-    "projectName": "nazwa Projektu",
+    "projectName": "Nazwa Projektu",
     "name": "Projekty"
   }
 }
