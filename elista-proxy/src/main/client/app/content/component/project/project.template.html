@@ -19,7 +19,7 @@
                             <img class="project__img" src="../images/mainten.png" alt="dev">
                             <div class="project__status">{{item.status}}</div>
                         </div>
-                        <md-icon class="project__delete"
+                        <md-icon ng-if="projectCtr.showAdminFunction == true" class="project__delete"
                                  ng-click="projectCtr.deleteProjectId(item.id)"
                                  translate="icons.close"></md-icon>
                     </div>
@@ -37,7 +37,7 @@
                             <img class="project__img" src="../images/dev.png" alt="dev">
                             <div class="project__status">{{item.status}}</div>
                         </div>
-                        <md-icon class="project__delete"
+                        <md-icon ng-if="projectCtr.showAdminFunction == true" class="project__delete"
                                  ng-click="projectCtr.deleteProjectId(item.id)"
                                  translate="icons.close"></md-icon>
                     </div>
@@ -54,7 +54,7 @@
                             </div>
                             <img class="project__img" src="../images/roll.png" alt="dev">
                             <div class="project__status">{{item.status}}</div>
-                            <md-icon class="project__delete"
+                            <md-icon ng-if="projectCtr.showAdminFunction == true" class="project__delete"
                                      ng-click="projectCtr.deleteProjectId(item.id)"
                                      translate="icons.close"></md-icon>
                         </div>
@@ -73,7 +73,7 @@
                             </div>
                             <img class="project__img" src="../images/close.png" alt="dev">
                             <div class="project__status">{{item.status}}</div>
-                            <md-icon class="project__delete"
+                            <md-icon ng-if="projectCtr.showAdminFunction == true" class="project__delete"
                                      ng-click="projectCtr.deleteProjectId(item.id)"
                                      translate="icons.close"></md-icon>
                         </div>
@@ -92,7 +92,7 @@
                             </div>
                             <img class="project__img" src="../images/concept.png" alt="dev">
                             <div class="project__status">{{item.status}}</div>
-                            <md-icon class="project__delete"
+                            <md-icon ng-if="projectCtr.showAdminFunction == true" class="project__delete"
                                      ng-click="projectCtr.deleteProjectId(item.id)"
                                      translate="icons.close"></md-icon>
                         </div>
@@ -103,7 +103,7 @@
             </div>
         </md-content>
 
-        <md-button ng-click="projectCtr.formContainer()" class="project__btn">
+        <md-button ng-if="projectCtr.showAdminFunction == true" ng-click="projectCtr.formContainer()" class="project__btn">
             <md-icon translate="icons.edit"></md-icon>
         </md-button>
 
@@ -124,7 +124,7 @@
                     </md-input-container>
                 </div>
 
-                <div layout="column" flex="100">
+                <div class="project__choose" layout="column" flex="100">
                     <md-input-container class="md-block" flex-gt-sm>
                         <md-select name="status"
                                    placeholder="{{ 'project.choose' | translate }}"
@@ -141,6 +141,29 @@
 
                         </md-select>
                         <div ng-messages="projectForm.status.$error">
+                            <div ng-message="required" translate="project.typeRequired"></div>
+                        </div>
+                    </md-input-container>
+                </div>
+
+                <div layout="column" flex="100">
+                    <md-input-container class="md-block" flex-gt-sm>
+                        <md-select name="id"
+                                   placeholder="Użytkownik i18n"
+                                   ng-model="projectCtr.projectNew.employeeId"
+                                   required>
+
+                            <md-option class="project__width" ng-repeat="employee in projectCtr.arrayEmployee"
+                                       value="{{employee.id}}">
+                                <img src="{{employee.avatarPath}}"
+                                    class="md-avatar project__avatar"
+                                    alt="{{employee.name}} avatar" />
+                                <div class="employeeList__text">
+                                    {{employee.name}} {{employee.lastname}}
+                                </div></md-option>
+
+                        </md-select>
+                        <div ng-messages="projectForm.id.$error">
                             <div ng-message="required" translate="project.typeRequired"></div>
                         </div>
                     </md-input-container>

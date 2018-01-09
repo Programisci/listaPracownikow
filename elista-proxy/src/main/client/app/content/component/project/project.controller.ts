@@ -20,16 +20,34 @@ module employees {
         public projectType: Array<String> =[];
         lista: Array<IProjectType> = [];
         projectNew: IProjects;
+        public employeDetail: IEmployee;
+        public showAdminFunction: boolean = false;
+        arrayEmployee: Array<IEmployee>;
 
         // @ngInject
         constructor(private $translatePartialLoader: ng.translate.ITranslatePartialLoaderService,
                     private ProjectService: IProjectService,
+                    private EmployeeBackService: IEmployeeBackService,
                     private $stateParams: ActorsStateParams) {
             this.$translatePartialLoader.addPart('project');
             this.$translatePartialLoader.addPart('icons');
             this.init();
+            this.EmployeeBackService.getEmployeeDetail(localStorage.getItem("token")).then(this.getEmployeeDetailCallBack)
 
         }
+
+        private getEmployeeCallBack = (res: Array<IEmployee>) => {
+            this.arrayEmployee = res;
+        };
+
+        private getEmployeeDetailCallBack = (res: IEmployee) => {
+            this.employeDetail = res;
+            if(this.employeDetail.role == "Admin"){
+                this.showAdminFunction = true;
+            } else {
+                this.showAdminFunction = false;
+            }
+        };
 
         private init() {
             this.projectsArray = [];
@@ -39,6 +57,8 @@ module employees {
             this.projectsArrayRollout = [];
             this.projectsArrayClosure = [];
             this.ProjectService.getProject().then(this.getProjectsCallBack);
+            this.EmployeeBackService.getEmployee().then(this.getEmployeeCallBack);
+
             // this.ProjectService.getProjectStatus().then(this.getProjectsStatusCallBack);
         };
 
@@ -75,7 +95,6 @@ module employees {
         };
 
         private saveProject = () => {
-            this.projectNew.employeeId = this.employeeId;
             this.ProjectService.saveProject(this.projectNew).then(this.saveProjectCallBack);
         };
 
@@ -84,6 +103,7 @@ module employees {
             this.init();
             this.projectNew.projectName = defaultStatus;
             this.projectNew.status = defaultStatus;
+            this.projectNew.employeeId = defaultStatus;
         };
 
         private deleteProjectId(id: number) {
