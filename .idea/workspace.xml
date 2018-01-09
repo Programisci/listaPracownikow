@@ -28,108 +28,48 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.45674044">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="userPage.controller.ts" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/elista-proxy/src/main/client/app/content/page/userPage/userPage.controller.ts">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="260">
-                  <caret line="16" column="40" lean-forward="false" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="employeeDetail.template.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/elista-proxy/src/main/client/app/content/component/employeeDetail/employeeDetail.template.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="316">
-                  <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="signin.controller.ts" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/elista-proxy/src/main/client/app/content/page/access/signin.controller.ts">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="160">
-                  <caret line="23" column="49" lean-forward="false" selection-start-line="23" selection-start-column="49" selection-end-line="23" selection-end-column="49" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="signin.tpl.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/elista-proxy/src/main/client/app/content/page/access/signin.tpl.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="156">
-                  <caret line="44" column="14" lean-forward="true" selection-start-line="44" selection-start-column="14" selection-end-line="44" selection-end-column="14" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="employeeDetail.less" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/elista-proxy/src/main/client/app/styles/component/employeeDetail.less">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="860">
-                  <caret line="100" column="0" lean-forward="true" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="detail.json" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/elista-proxy/src/main/client/app/i18n/pl/detail.json">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="280">
-                  <caret line="14" column="18" lean-forward="false" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="18" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="employeeDetailForm.controller.ts" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/elista-proxy/src/main/client/app/content/component/employeeDetailForm/employeeDetailForm.controller.ts">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="160">
-                  <caret line="14" column="42" lean-forward="false" selection-start-line="14" selection-start-column="42" selection-end-line="14" selection-end-column="42" />
-                  <folding>
-                    <element signature="n#!!doc" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="employee.interface.ts" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/elista-proxy/src/main/client/app/content/interfaces/employee.interface.ts">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="220">
-                  <caret line="11" column="12" lean-forward="false" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="12" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file leaf-file-name="employeeDetailForm.template.html" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/elista-proxy/src/main/client/app/content/component/employeeDetailForm/employeeDetailForm.template.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="196">
-                  <caret line="59" column="55" lean-forward="false" selection-start-line="59" selection-start-column="55" selection-end-line="59" selection-end-column="55" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf>
+      <file leaf-file-name="navbar.template.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/elista-proxy/src/main/client/app/content/component/navbar/navbar.template.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="30" column="68" lean-forward="false" selection-start-line="30" selection-start-column="53" selection-end-line="30" selection-end-column="68" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="forms.template.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/elista-proxy/src/main/client/app/content/component/forms/forms.template.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="443">
+              <caret line="108" column="52" lean-forward="false" selection-start-line="108" selection-start-column="52" selection-end-line="108" selection-end-column="52" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="employeeDetailForm.template.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/elista-proxy/src/main/client/app/content/component/employeeDetailForm/employeeDetailForm.template.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="460">
+              <caret line="108" column="59" lean-forward="true" selection-start-line="108" selection-start-column="59" selection-end-line="108" selection-end-column="59" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="forms.controller.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/elista-proxy/src/main/client/app/content/component/forms/forms.controller.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="18" column="54" lean-forward="true" selection-start-line="18" selection-start-column="54" selection-end-line="18" selection-end-column="54" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -140,7 +80,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Type</find>
       <find>ISkill</find>
       <find>Project</find>
       <find>Contact</find>
@@ -170,6 +109,7 @@
       <find>takeRefreshListOfEmployee</find>
       <find>detail</find>
       <find>detail__form</find>
+      <find>navbar__form</find>
     </findStrings>
     <replaceStrings>
       <replace>formC</replace>
@@ -220,8 +160,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/elista-proxy/src/main/client/app/content/component/project/project.template.html" />
-        <option value="$PROJECT_DIR$/elista-backend/src/main/java/eu/programisci/app/timesheet/service/TimesheetServiceImpl.java" />
         <option value="$PROJECT_DIR$/elista-backend/src/main/java/eu/programisci/app/timesheet/converters/TimesheetConverter.java" />
         <option value="$PROJECT_DIR$/elista-proxy/src/main/client/app/content/interfaces/timesheet/timesheet.interface.ts" />
         <option value="$PROJECT_DIR$/elista-proxy/src/main/client/bower.json" />
@@ -230,7 +168,6 @@
         <option value="$PROJECT_DIR$/elista-proxy/src/main/client/app/content/component/timesheet/timesheet.template.html" />
         <option value="$PROJECT_DIR$/elista-proxy/src/main/client/app/styles/component/timesheet.less" />
         <option value="$PROJECT_DIR$/elista-backend/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/elista-proxy/src/main/client/app/styles/component/navbar.less" />
         <option value="$PROJECT_DIR$/elista-proxy/pom.xml" />
         <option value="$PROJECT_DIR$/elista-proxy/src/main/client/app/content/services/employee/employeeBack.services.ts" />
         <option value="$PROJECT_DIR$/elista-proxy/src/main/client/app/styles/pages/login.less" />
@@ -269,8 +206,11 @@
         <option value="$PROJECT_DIR$/elista-proxy/src/main/client/app/content/page/access/signin.tpl.html" />
         <option value="$PROJECT_DIR$/elista-proxy/src/main/client/app/content/page/access/signin.controller.ts" />
         <option value="$PROJECT_DIR$/elista-proxy/src/main/client/app/i18n/pl/detail.json" />
-        <option value="$PROJECT_DIR$/elista-proxy/src/main/client/app/content/component/employeeDetailForm/employeeDetailForm.template.html" />
         <option value="$PROJECT_DIR$/elista-proxy/src/main/client/app/styles/component/employeeDetail.less" />
+        <option value="$PROJECT_DIR$/elista-proxy/src/main/client/app/styles/component/navbar.less" />
+        <option value="$PROJECT_DIR$/elista-proxy/src/main/client/app/content/component/employeeDetailForm/employeeDetailForm.controller.ts" />
+        <option value="$PROJECT_DIR$/elista-proxy/src/main/client/app/content/component/forms/forms.template.html" />
+        <option value="$PROJECT_DIR$/elista-proxy/src/main/client/app/content/component/employeeDetailForm/employeeDetailForm.template.html" />
       </list>
     </option>
   </component>
@@ -675,6 +615,18 @@
               <item name="content" type="462c0819:PsiDirectoryNode" />
               <item name="component" type="462c0819:PsiDirectoryNode" />
               <item name="employeeList" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="listaPracownikow" type="b2602c69:ProjectViewProjectNode" />
+              <item name="listaPracownikow" type="462c0819:PsiDirectoryNode" />
+              <item name="elista-proxy" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="content" type="462c0819:PsiDirectoryNode" />
+              <item name="component" type="462c0819:PsiDirectoryNode" />
+              <item name="forms" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="listaPracownikow" type="b2602c69:ProjectViewProjectNode" />
@@ -1349,12 +1301,12 @@
       <workItem from="1511262543916" duration="934000" />
       <workItem from="1513608741749" duration="142000" />
       <workItem from="1514341281791" duration="1483000" />
-      <workItem from="1515501218497" duration="17889000" />
+      <workItem from="1515501218497" duration="19007000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="115912000" />
+    <option name="totallyTimeSpent" value="117030000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1367,6 +1319,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1860" height="1098" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41568205" sideWeight="0.5044444" order="7" side_tool="true" content_ui="tabs" />
@@ -1386,13 +1339,13 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32975295" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3727175" sideWeight="0.4977778" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3727175" sideWeight="0.4977778" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37701395" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17166667" sideWeight="0.6551724" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37701395" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21833333" sideWeight="0.6541096" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Grunt " active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17166667" sideWeight="0.3448276" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Grunt " active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21833333" sideWeight="0.3458904" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32975295" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -1454,32 +1407,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/elista-backend/src/main/java/eu/programisci/app/contact/ob/ContactOB.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="640">
-          <caret line="32" column="35" lean-forward="false" selection-start-line="32" selection-start-column="35" selection-end-line="32" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/elista-backend/src/main/java/eu/programisci/app/project/enums/EStatus.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" column="12" lean-forward="false" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/elista-backend/src/main/java/eu/programisci/app/project/ob/ProjectOB.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="438">
-          <caret line="31" column="35" lean-forward="false" selection-start-line="31" selection-start-column="35" selection-end-line="31" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/elista-backend/src/main/java/eu/programisci/app/timesheet/ob/TimesheetOB.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-22">
@@ -1702,14 +1629,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/elista-proxy/src/main/client/app/content/component/navbar/navbar.controller.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="14" column="28" lean-forward="false" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/elista-backend/src/main/java/eu/programisci/app/employee/api/EmployeeRestController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-40">
@@ -1752,14 +1671,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/elista-proxy/src/main/client/app/content/component/navbar/navbar.template.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="16" column="54" lean-forward="false" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/elista-backend/src/main/java/eu/programisci/app/employee/api/EmployeeCustomRestController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="260">
@@ -1786,14 +1697,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/elista-proxy/src/main/client/app/content/page/userPage/userPage.controller.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="16" column="40" lean-forward="false" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/elista-proxy/src/main/client/app/content/app.run.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="296">
@@ -1807,16 +1710,6 @@
         <state relative-caret-position="220">
           <caret line="11" column="12" lean-forward="false" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="12" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/elista-proxy/src/main/client/app/content/component/employeeDetailForm/employeeDetailForm.controller.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="14" column="42" lean-forward="false" selection-start-line="14" selection-start-column="42" selection-end-line="14" selection-end-column="42" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1844,18 +1737,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/elista-proxy/src/main/client/app/content/page/access/signin.controller.ts">
+    <entry file="file://$PROJECT_DIR$/elista-proxy/src/main/client/app/styles/component/employeeDetail.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="23" column="49" lean-forward="false" selection-start-line="23" selection-start-column="49" selection-end-line="23" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/elista-proxy/src/main/client/app/content/component/employeeDetailForm/employeeDetailForm.template.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="59" column="55" lean-forward="false" selection-start-line="59" selection-start-column="55" selection-end-line="59" selection-end-column="55" />
+        <state relative-caret-position="860">
+          <caret line="100" column="0" lean-forward="true" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1868,10 +1753,76 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/elista-proxy/src/main/client/app/styles/component/employeeDetail.less">
+    <entry file="file://$PROJECT_DIR$/elista-proxy/src/main/client/app/content/page/access/signin.controller.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="860">
-          <caret line="100" column="0" lean-forward="true" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
+        <state relative-caret-position="160">
+          <caret line="23" column="49" lean-forward="false" selection-start-line="23" selection-start-column="49" selection-end-line="23" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/elista-proxy/src/main/client/app/content/page/userPage/userPage.controller.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="16" column="40" lean-forward="false" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/elista-proxy/src/main/client/app/content/component/navbar/navbar.template.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="30" column="68" lean-forward="false" selection-start-line="30" selection-start-column="53" selection-end-line="30" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/elista-proxy/src/main/client/app/styles/component/navbar.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="359">
+          <caret line="60" column="15" lean-forward="false" selection-start-line="60" selection-start-column="15" selection-end-line="60" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/elista-proxy/src/main/client/app/content/component/navbar/navbar.controller.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="21" column="111" lean-forward="false" selection-start-line="21" selection-start-column="92" selection-end-line="21" selection-end-column="111" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/elista-proxy/src/main/client/app/content/component/employeeDetailForm/employeeDetailForm.controller.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="47" column="41" lean-forward="false" selection-start-line="47" selection-start-column="41" selection-end-line="47" selection-end-column="41" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/elista-proxy/src/main/client/app/content/component/forms/forms.controller.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="18" column="54" lean-forward="true" selection-start-line="18" selection-start-column="54" selection-end-line="18" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/elista-proxy/src/main/client/app/content/component/employeeDetailForm/employeeDetailForm.template.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="108" column="59" lean-forward="true" selection-start-line="108" selection-start-column="59" selection-end-line="108" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/elista-proxy/src/main/client/app/content/component/forms/forms.template.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="443">
+          <caret line="108" column="52" lean-forward="false" selection-start-line="108" selection-start-column="52" selection-end-line="108" selection-end-column="52" />
           <folding />
         </state>
       </provider>

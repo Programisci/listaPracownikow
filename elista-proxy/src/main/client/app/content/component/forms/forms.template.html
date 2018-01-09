@@ -8,10 +8,10 @@
             <md-input-container flex="50">
                 <label translate="detail.name"></label>
                 <input required
-                       name="clientName"
+                       name="name"
                        ng-model="formC.employee.name">
 
-                <div ng-messages="forms.clientName.$error">
+                <div ng-messages="forms.name.$error">
                     <div ng-message="required" translate="detail.nameRequired"></div>
                 </div>
             </md-input-container>
@@ -21,10 +21,10 @@
             <md-input-container flex="50">
                 <label translate="detail.lastname"></label>
                 <input required
-                       name="clientLastname"
+                       name="lastname"
                        ng-model="formC.employee.lastname">
 
-                <div ng-messages="forms.clientLastname.$error">
+                <div ng-messages="forms.lastname.$error">
                     <div ng-message="required" translate="detail.lastnameRequired"></div>
                 </div>
             </md-input-container>
@@ -34,10 +34,10 @@
             <md-input-container flex="50">
                 <label translate="detail.position"></label>
                 <input required
-                       name="clientSection"
+                       name="position"
                        ng-model="formC.employee.position">
 
-                <div ng-messages="forms.clientSection.$error">
+                <div ng-messages="forms.position.$error">
                     <div ng-message="required" translate="detail.positionRequired"></div>
                 </div>
             </md-input-container>
@@ -48,11 +48,66 @@
             <md-input-container flex="50">
                 <label translate="detail.avatar"></label>
                 <input required
-                       name="clientAvatar"
+                       name="avatarPath"
                        ng-model="formC.employee.avatarPath">
 
-                <div ng-messages="forms.clientAvatar.$error">
+                <div ng-messages="forms.avatarPath.$error">
                     <div ng-message="required" translate="detail.avatarRequired"></div>
+                </div>
+            </md-input-container>
+        </div>
+
+        <div class="detail__input" layout="column" flex="100">
+            <md-input-container flex="50">
+                <label translate="detail.cashPerHour"></label>
+                <input required
+                       name="cashPerHour"
+                       ng-model="formC.employee.cashPerHour">
+
+                <div ng-messages="forms.cashPerHour.$error">
+                    <div ng-message="required" translate="detail.cashPerHourRequired"></div>
+                </div>
+            </md-input-container>
+        </div>
+
+        <div class="detail__input" layout="column" flex="100">
+            <md-input-container flex="50">
+                <label translate="detail.login"></label>
+                <input required
+                       name="login"
+                       ng-model="formC.employee.login">
+
+                <div ng-messages="forms.login.$error">
+                    <div ng-message="required" translate="detail.loginRequired"></div>
+                </div>
+            </md-input-container>
+        </div>
+        <div class="detail__input" layout="column" flex="100">
+            <md-input-container flex="50">
+                <label translate="detail.passwd"></label>
+                <input required
+                       name="passwd"
+                       ng-model="formC.employee.passwd">
+
+                <div ng-messages="forms.passwd.$error">
+                    <div ng-message="required" translate="detail.passwdRequired"></div>
+                </div>
+            </md-input-container>
+        </div>
+
+        <div class="detail__input detail__multiselect" layout="column" flex="100">
+            <md-input-container flex="50">
+                <md-select name="workplace"
+                           placeholder="{{ 'detail.role' | translate }}"
+                           ng-model="formC.employee.role"
+                           required>
+
+                    <md-option value="Admin">Admin</md-option>
+                    <md-option value="User">User</md-option>
+
+                </md-select>
+                <div ng-messages="forms.workplace.$error">
+                    <div ng-message="required" translate="time.workplaceRequired"></div>
                 </div>
             </md-input-container>
         </div>

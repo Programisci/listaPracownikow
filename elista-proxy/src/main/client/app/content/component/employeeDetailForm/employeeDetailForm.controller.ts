@@ -15,6 +15,7 @@ module employees {
         employeeId = this.$stateParams.id;
         employee: IEmployee;
         public onEdit: ($event) => void;
+        employeeRole: string;
 
 
         // @ngInject
@@ -32,6 +33,7 @@ module employees {
         private init(newContact: boolean) {
             if (newContact == true) {
                 this.EmployeeBackService.getEmployeeDetail(this.employeeId).then(this.getEmployeeFormCallBack);
+                this.EmployeeBackService.getEmployeeDetail(localStorage.getItem("token")).then(this.getEmployeeRole);
                 this.update = false;
             }
         };
@@ -40,6 +42,10 @@ module employees {
             this.employee = res;
             console.log("dane aktualne przed zapisaniem to: " + this.employee);
 
+        };
+
+        private getEmployeeRole = (res: IEmployee) => {
+            this.employeeRole = res.role;
         };
 
         public saveEmployee = () => {
