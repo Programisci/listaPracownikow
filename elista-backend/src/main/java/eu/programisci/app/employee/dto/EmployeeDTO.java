@@ -12,7 +12,7 @@ public class EmployeeDTO {
     private Long id;
     private String name;
     private String lastname;
-    private EPosition position;
+    private String position;
     private String avatarPath;
     private ERole role;
     private double cashPerHour;
@@ -22,7 +22,7 @@ public class EmployeeDTO {
     public EmployeeDTO() {
     }
 
-    public EmployeeDTO(Long aId, String aName, String aLastname, EPosition aPosition, String aAvatarPath, ERole aRole,
+    public EmployeeDTO(Long aId, String aName, String aLastname, String aPosition, String aAvatarPath, ERole aRole,
                        double aCashPerHour, String aPasswd, String aLogin) {
         id = aId;
         name = aName;

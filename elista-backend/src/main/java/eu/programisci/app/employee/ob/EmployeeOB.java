@@ -30,9 +30,8 @@ public class EmployeeOB {
     @Column(name = "lastname")
     private String lastname;
 
-    @Enumerated(EnumType.STRING)
     @Column(name = "position")
-    private EPosition position;
+    private String position;
 
     @Column(name = "avatarPath")
     private String avatarPath;

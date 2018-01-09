@@ -3,7 +3,7 @@
         <div translate="detail.editTitle"></div>
     </div>
 
-    <div layout="column" flex="100">
+    <div class="detail__input" layout="column" flex="100">
         <md-input-container flex="50">
             <label translate="detail.name"></label>
             <input required
@@ -16,7 +16,7 @@
         </md-input-container>
     </div>
 
-    <div layout="column" flex="100">
+    <div class="detail__input" layout="column" flex="100">
         <md-input-container flex="50">
             <label translate="detail.lastname"></label>
             <input required
@@ -29,7 +29,7 @@
         </md-input-container>
     </div>
 
-    <div layout="column" flex="100">
+    <div class="detail__input" layout="column" flex="100">
         <md-input-container flex="50">
             <label translate="detail.position"></label>
             <input required
@@ -43,7 +43,7 @@
     </div>
 
 
-    <div layout="column" flex="100">
+    <div class="detail__input" layout="column" flex="100">
         <md-input-container flex="50">
             <label translate="detail.avatar"></label>
             <input required
@@ -55,6 +55,63 @@
             </div>
         </md-input-container>
     </div>
+
+
+    <div ng-if="detailFormCtr.employee.role == 'Admin'" class="detail__input" layout="column" flex="100">
+        <md-input-container flex="50">
+            <label translate="detail.cashPerHour"></label>
+            <input required
+                   name="cashPerHour"
+                   ng-model="detailFormCtr.employee.cashPerHour">
+
+            <div ng-messages="detailForm.cashPerHour.$error">
+                <div ng-message="required" translate="detail.cashPerHourRequired"></div>
+            </div>
+        </md-input-container>
+    </div>
+
+    <div class="detail__input" layout="column" flex="100">
+        <md-input-container flex="50">
+            <label translate="detail.login"></label>
+            <input required
+                   name="login"
+                   ng-model="detailFormCtr.employee.login">
+
+            <div ng-messages="detailForm.login.$error">
+                <div ng-message="required" translate="detail.loginRequired"></div>
+            </div>
+        </md-input-container>
+    </div>
+    <div class="detail__input" layout="column" flex="100">
+        <md-input-container flex="50">
+            <label translate="detail.passwd"></label>
+            <input required
+                   name="passwd"
+                   ng-model="detailFormCtr.employee.passwd">
+
+            <div ng-messages="detailForm.passwd.$error">
+                <div ng-message="required" translate="detail.passwdRequired"></div>
+            </div>
+        </md-input-container>
+    </div>
+
+    <div ng-if="detailFormCtr.employee.role == 'Admin'" class="detail__input detail__multiselect" layout="column" flex="100">
+        <md-input-container flex="50">
+            <md-select name="workplace"
+                       placeholder="{{ 'detail.role' | translate }}"
+                       ng-model="detailFormCtr.employee.role"
+                       required>
+
+                <md-option value="Admin">Admin</md-option>
+                <md-option value="User">User</md-option>
+
+            </md-select>
+            <div ng-messages="timesheetForm.workplace.$error">
+                <div ng-message="required" translate="time.workplaceRequired"></div>
+            </div>
+        </md-input-container>
+    </div>
+
 
     <div layout="column"
          flex="100"

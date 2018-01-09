@@ -78,18 +78,18 @@ public class EmployeeServiceImpl implements IEmployeeService {
     @Override
     public List<EmployeeDTO> init() {
         List<EmployeeOB> pOBList = new ArrayList<>();
-        pOBList.add(employeeConverter.dtoToOb(new EmployeeDTO(null, "Damian", "Rabczewski", EPosition.BackEndDeveloper, "../images/avatar.jpg", ERole.Admin, 140, "admin", "admin")));
-        pOBList.add(employeeConverter.dtoToOb(new EmployeeDTO(null, "Krzychu", "Stonoga", EPosition.FrontEndDeveloper, "../images/avatar1.jpg", ERole.User, 14, "user", "user1")));
-        pOBList.add(employeeConverter.dtoToOb(new EmployeeDTO(null, "Damian", "Rabczewski", EPosition.BackEndDeveloper, "../images/avatar2.jpg", ERole.User, 14, "user", "user2")));
-        pOBList.add(employeeConverter.dtoToOb(new EmployeeDTO(null, "Damian", "Stonoga", EPosition.FrontEndDeveloper, "../images/avatar3.jpg", ERole.User, 14, "user", "user3")));
-        pOBList.add(employeeConverter.dtoToOb(new EmployeeDTO(null, "Krzychu", "Rabczewski", EPosition.BackEndDeveloper, "../images/avatar.jpg", ERole.User, 14, "user", "user4")));
-        pOBList.add(employeeConverter.dtoToOb(new EmployeeDTO(null, "Stonoga", "Rabczewski", EPosition.FrontEndDeveloper, "../images/avatar1.jpg", ERole.User, 14, "user", "user5")));
-        pOBList.add(employeeConverter.dtoToOb(new EmployeeDTO(null, "Damian", "Rabczewski", EPosition.BackEndDeveloper, "../images/avatar2.jpg", ERole.User, 14, "user", "user6")));
-        pOBList.add(employeeConverter.dtoToOb(new EmployeeDTO(null, "Ewelina", "Maryś", EPosition.FrontEndDeveloper, "../images/avatar3.jpg", ERole.User, 14, "user", "user7")));
-        pOBList.add(employeeConverter.dtoToOb(new EmployeeDTO(null, "Krzychu", "Stonoga", EPosition.BackEndDeveloper, "../images/avatar1.jpg", ERole.User, 14, "user", "user8")));
-        pOBList.add(employeeConverter.dtoToOb(new EmployeeDTO(null, "Damian", "Rabczewski", EPosition.FrontEndDeveloper, "../images/avatar1.jpg", ERole.User, 14, "user", "user9")));
-        pOBList.add(employeeConverter.dtoToOb(new EmployeeDTO(null, "Stonoga", "Rabczewski", EPosition.BackEndDeveloper, "../images/avatar2.jpg", ERole.User, 14, "user", "user10")));
-        pOBList.add(employeeConverter.dtoToOb(new EmployeeDTO(null, "Damian", "Rabczewski", EPosition.FrontEndDeveloper, "../images/avatar3.jpg", ERole.User, 14, "user", "user11")));
+        pOBList.add(employeeConverter.dtoToOb(new EmployeeDTO(null, "Damian", "Rabczewski", "Backend Developer", "../images/avatar.jpg", ERole.Admin, 140, "admin", "admin")));
+        pOBList.add(employeeConverter.dtoToOb(new EmployeeDTO(null, "Krzychu", "Stonoga", "Frontend Developer", "../images/avatar1.jpg", ERole.User, 14, "user", "user1")));
+        pOBList.add(employeeConverter.dtoToOb(new EmployeeDTO(null, "Damian", "Rabczewski", "Backend Developer", "../images/avatar2.jpg", ERole.User, 14, "user", "user2")));
+        pOBList.add(employeeConverter.dtoToOb(new EmployeeDTO(null, "Damian", "Stonoga", "Frontend Developer", "../images/avatar3.jpg", ERole.User, 14, "user", "user3")));
+        pOBList.add(employeeConverter.dtoToOb(new EmployeeDTO(null, "Krzychu", "Rabczewski", "Backend Developer", "../images/avatar.jpg", ERole.User, 14, "user", "user4")));
+        pOBList.add(employeeConverter.dtoToOb(new EmployeeDTO(null, "Stonoga", "Rabczewski", "Frontend Developer", "../images/avatar1.jpg", ERole.User, 14, "user", "user5")));
+        pOBList.add(employeeConverter.dtoToOb(new EmployeeDTO(null, "Damian", "Rabczewski", "Backend Developer", "../images/avatar2.jpg", ERole.User, 14, "user", "user6")));
+        pOBList.add(employeeConverter.dtoToOb(new EmployeeDTO(null, "Ewelina", "Maryś", "Frontend Developer", "../images/avatar3.jpg", ERole.User, 14, "user", "user7")));
+        pOBList.add(employeeConverter.dtoToOb(new EmployeeDTO(null, "Krzychu", "Stonoga", "Backend Developer", "../images/avatar1.jpg", ERole.User, 14, "user", "user8")));
+        pOBList.add(employeeConverter.dtoToOb(new EmployeeDTO(null, "Damian", "Rabczewski", "Frontend Developer", "../images/avatar1.jpg", ERole.User, 14, "user", "user9")));
+        pOBList.add(employeeConverter.dtoToOb(new EmployeeDTO(null, "Stonoga", "Rabczewski", "Backend Developer", "../images/avatar2.jpg", ERole.User, 14, "user", "user10")));
+        pOBList.add(employeeConverter.dtoToOb(new EmployeeDTO(null, "Damian", "Rabczewski", "Frontend Developer", "../images/avatar3.jpg", ERole.User, 14, "user", "user11")));
         pOBList = employeeRepository.save(pOBList);
         return employeeConverter.obListToDtoList(pOBList);
     }

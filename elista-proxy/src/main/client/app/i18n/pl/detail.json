@@ -11,8 +11,16 @@
     "editTitle": "Edytuj swoje dane",
     "addNewEmployeeTitle": "Dodaj użytkownika",
     "nameRequired": "Twoje imię jest wymagane.",
+    "roleRequired": "Rola jest wymagana.",
+    "loginRequired": "Login jest wymagany.",
+    "passwdRequired": "Hasło jest wymagane.",
+    "cashPerHourRequired": "Stawka godzinowa jest wymagana.",
     "lastnameRequired": "Twoje nazwisko jest wymagane.",
     "positionRequired": "Twoje stanowisko jest wymagane.",
-    "avatarRequired": "Twój avatar jest wymagane."
+    "avatarRequired": "Twój avatar jest wymagane.",
+    "role": "Rola",
+    "cashPerHour": "Stawka godzinowa",
+    "login": "Login",
+    "passwd": "Hasło"
   }
 }

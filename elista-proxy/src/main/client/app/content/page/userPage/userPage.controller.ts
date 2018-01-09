@@ -8,11 +8,18 @@ module employees {
     export class UserCtrl {
 
         private refreshEmployee: boolean = false;
+        public employeDetail: IEmployee;
 
         // @ngInject
         constructor(private EmployeeBackService: IEmployeeBackService,
                     private $timeout: ng.ITimeoutService) {
+            this.EmployeeBackService.getEmployeeDetail(localStorage.getItem("token")).then(this.getEmployeeCallBack)
+            console.log("Token:     " + localStorage.getItem("token"));
         }
+
+        private getEmployeeCallBack = (res: IEmployee) => {
+            this.employeDetail = res;
+        };
 
         private refreshAfterAdd(hideVariable) {
             this.refreshEmployee = true;
