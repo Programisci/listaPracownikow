@@ -7,8 +7,10 @@ module employees {
 
     user: IUser = {};
     addDataBase: boolean = true;
+    arrayEmployee: Array<IEmployee>;
 
-    // @ngInject
+
+      // @ngInject
     constructor(private $translatePartialLoader: ng.translate.ITranslatePartialLoaderService,
                 private $cookies: ng.cookies.ICookiesService,
                 private $state: ng.ui.IStateService,
@@ -23,24 +25,33 @@ module employees {
 
     private init(){
      if(this.addDataBase == true){
-       this.EmployeeBackService.getInit().then(this.getEmployeeInitCallBack);
-       this.EmployeeBackService.getInitContact().then(this.getEmployeeInitCallBack);
-       this.EmployeeBackService.getInitProject().then(this.getEmployeeInitCallBack);
-       this.EmployeeBackService.getInitSkill().then(this.getEmployeeInitCallBack);
-       this.EmployeeBackService.getInitTimesheet().then(this.getEmployeeInitCallBack);
+       this.EmployeeBackService.getEmployee().then(this.getEmployeeCallBack);
+       this.EmployeeBackService.getInit();
+       this.EmployeeBackService.getInitContact();
+       this.EmployeeBackService.getInitProject();
+       this.EmployeeBackService.getInitSkill();
+       this.EmployeeBackService.getInitTimesheet();
        this.addDataBase == false;
      };
 
     }
 
+      private getEmployeeCallBack = (res: Array<IEmployee>) => {
+          this.arrayEmployee = res;
+      };
 
-    private getEmployeeInitCallBack = () => {
-    };
 
-
-    public login() {
-      this.AuthService.login(this.user).then(this.loginResponseCallback);
+    public login(user: IUser) {
+        for(var i =0; i < this.arrayEmployee.length; i++){
+            if ( this.arrayEmployee[i].login == user.login){
+                if(this.arrayEmployee[i].passwd == user.passwd){
+                    this.$state.go('access.userPage');
+                }
+            }
+        }
     }
+
+
 
     private loginResponseCallback = (response: IToken)=> {
       this.$cookies.putObject('authToken', response);

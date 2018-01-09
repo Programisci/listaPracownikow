@@ -17,6 +17,10 @@ public class EmployeeConverter {
         out.setPosition(in.getPosition());
         out.setLastname(in.getLastname());
         out.setAvatarPath(in.getAvatarPath());
+        out.setRole(in.getRole());
+        out.setCashPerHour(in.getCashPerHour());
+        out.setPasswd(in.getPasswd());
+        out.setLogin(in.getLogin());
         return out;
     }
 
@@ -27,6 +31,10 @@ public class EmployeeConverter {
         out.setPosition(in.getPosition());
         out.setLastname(in.getLastname());
         out.setAvatarPath(in.getAvatarPath());
+        out.setRole(in.getRole());
+        out.setCashPerHour(in.getCashPerHour());
+        out.setPasswd(in.getPasswd());
+        out.setLogin(in.getLogin());
         return out;
     }
 

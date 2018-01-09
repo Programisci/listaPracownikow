@@ -8,7 +8,7 @@
         <div class="row m-b">
           <div class="col-md-12">
             <div class="field-wrapper">
-              <input name="login" type="text" ng-model="login.user.loginId"
+              <input name="login" type="text" ng-model="login.user.login"
                      placeholder="{{ 'signin.login' | translate }}"
                      class="input-line input-line-100">
               <label translate="signin.login"></label>
@@ -18,7 +18,7 @@
         <div class="row m-b">
           <div class="col-md-12">
             <div class="field-wrapper">
-              <input name="password" type="password" ng-model="login.user.password"
+              <input name="password" type="password" ng-model="login.user.passwd"
                      placeholder="{{ 'signin.password' | translate }}"
                      class="input-line input-line-100">
               <label translate="signin.password"></label>
@@ -28,11 +28,10 @@
 
         <div class="row m-t-lg">
           <div class="col-md-12">
-            <a href="#/access/page">
             <button name="loginButton"
+                    ng-click="login.login(login.user)"
                     class="btn md-btn btn-block btn-blue-gr"
                     translate="signin.signin"></button>
-            </a>
 
             <!--
             <a href="#/access/page">

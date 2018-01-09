@@ -8,7 +8,11 @@ module employees {
         name: string;
         lastname: string;
         position: string;
-        avatarFilePath: string;
+        avatarPath: string;
+        role: string;
+        cashPerHour: number;
+        passwd: string;
+        login: string;
     }
 
 }

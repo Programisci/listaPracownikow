@@ -1,6 +1,7 @@
 package eu.programisci.app.employee.ob;
 
 import eu.programisci.app.employee.enums.EPosition;
+import eu.programisci.app.employee.enums.ERole;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -35,5 +36,18 @@ public class EmployeeOB {
 
     @Column(name = "avatarPath")
     private String avatarPath;
+
+    @Enumerated(EnumType.STRING)
+    @Column(name = "role")
+    private ERole role;
+
+    @Column(name = "cashPerHour")
+    private double cashPerHour;
+
+    @Column(name = "passwd")
+    private String passwd;
+
+    @Column(name = "login")
+    private String login;
 
 }

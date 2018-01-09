@@ -7,8 +7,12 @@ module employees {
         id: number;
         name: string;
         lastname: string;
-        avatarPath: string;
         position: string;
+        avatarPath: string;
+        role: string;
+        cashPerHour: number;
+        passwd: string;
+        login: string;
         contacts: Array<T>;
     }
 
