@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/elista.iml" filepath="$PROJECT_DIR$/.idea/elista.iml" />
       <module fileurl="file://$PROJECT_DIR$/elista-backend/fakturer.iml" filepath="$PROJECT_DIR$/elista-backend/fakturer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/elista-proxy/proxy.iml" filepath="$PROJECT_DIR$/elista-proxy/proxy.iml" />
     </modules>
   </component>
 </project>

@@ -1,0 +1,17 @@
+Moduł pozwala na budowę kontenera dockerowego zawierającego kontener z frontendem mojeID.
+
+KROK 1. budowanie obrazu z Dockerfile
+Do poprawnego działania koniecznych jest działający demon Dockera (lub docker-engine na windowsie)
+--------------------------------------------------------------------------------------------------
+docker build -t angular_image_mojeid $(PathDoFolderuZdockeremMojeid)
+
+Przykład:
+docker build -t angular_image_lista_pracownikow F:\BluSite\listaPracownikow\elista-proxy\
+
+
+KROK 2. uruchamianie kontenera (w przypadku windowsa za pomocą Docker Toolbox)
+-------------------------------------------------------------------------------
+
+docker run -itd -p 9000:9000 --name angular_lista_pracownikow angular_image_lista_pracownikow bash
+
+

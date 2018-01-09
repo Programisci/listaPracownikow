@@ -7,10 +7,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="fakturer" />
+        <module name="proxy" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="fakturer" target="1.8" />
+      <module name="proxy" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

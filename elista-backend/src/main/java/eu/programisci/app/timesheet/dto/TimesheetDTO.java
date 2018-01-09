@@ -1,9 +1,13 @@
 package eu.programisci.app.timesheet.dto;
 
 import eu.programisci.app.timesheet.enums.EWork;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.util.Date;
 
+@Getter
+@Setter
 public class TimesheetDTO {
 
     private Long id;
@@ -22,54 +26,6 @@ public class TimesheetDTO {
         workDate = aWorkDate;
         startDate = aStartDate;
         endDate = aEndDate;
-        employeeId = aEmployeeId;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long aId) {
-        id = aId;
-    }
-
-    public EWork getWorkplace() {
-        return workplace;
-    }
-
-    public void setWorkplace(EWork aWorkplace) {
-        workplace = aWorkplace;
-    }
-
-    public Long getWorkDate() {
-        return workDate;
-    }
-
-    public void setWorkDate(Long aWorkDate) {
-        workDate = aWorkDate;
-    }
-
-    public Long getStartDate() {
-        return startDate;
-    }
-
-    public void setStartDate(Long aStartDate) {
-        startDate = aStartDate;
-    }
-
-    public Long getEndDate() {
-        return endDate;
-    }
-
-    public void setEndDate(Long aEndDate) {
-        endDate = aEndDate;
-    }
-
-    public Long getEmployeeId() {
-        return employeeId;
-    }
-
-    public void setEmployeeId(Long aEmployeeId) {
         employeeId = aEmployeeId;
     }
 

@@ -1,11 +1,15 @@
 package eu.programisci.app.employee.ob;
 
 import eu.programisci.app.employee.enums.EPosition;
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.*;
 import java.util.Date;
 import java.util.Set;
 
+@Getter
+@Setter
 @Entity
 @Table(name = "employee")
 @SequenceGenerator(allocationSize = 1, name = "SEKWENCJA", sequenceName = "gen_employee_id")
@@ -31,53 +35,5 @@ public class EmployeeOB {
 
     @Column(name = "avatarPath")
     private String avatarPath;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long aId) {
-        id = aId;
-    }
-
-    public Date getCreationDate() {
-        return creationDate;
-    }
-
-    public void setCreationDate(Date aCreationDate) {
-        creationDate = aCreationDate;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String aName) {
-        name = aName;
-    }
-
-    public String getLastname() {
-        return lastname;
-    }
-
-    public void setLastname(String aLastname) {
-        lastname = aLastname;
-    }
-
-    public EPosition getPosition() {
-        return position;
-    }
-
-    public void setPosition(EPosition aPosition) {
-        position = aPosition;
-    }
-
-    public String getAvatarPath() {
-        return avatarPath;
-    }
-
-    public void setAvatarPath(String aAvatarPath) {
-        avatarPath = aAvatarPath;
-    }
 
 }

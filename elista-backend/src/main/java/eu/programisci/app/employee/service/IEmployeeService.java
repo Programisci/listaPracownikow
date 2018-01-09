@@ -1,7 +1,6 @@
 package eu.programisci.app.employee.service;
 
 import eu.programisci.app.employee.dto.EmployeeDTO;
-import eu.programisci.app.employee.dto.EmployeeLightDTO;
 
 import java.util.List;
 

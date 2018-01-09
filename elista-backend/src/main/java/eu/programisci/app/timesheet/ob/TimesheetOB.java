@@ -1,10 +1,14 @@
 package eu.programisci.app.timesheet.ob;
 
 import eu.programisci.app.timesheet.enums.EWork;
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.*;
 import java.util.Date;
 
+@Getter
+@Setter
 @Entity
 @Table(name = "timesheet")
 @SequenceGenerator(allocationSize = 1, name = "SEKWENCJA", sequenceName = "gen_timesheet_id")
@@ -31,52 +35,5 @@ public class TimesheetOB {
     @Column(name = "employeeId")
     private Long employeeId;
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long aId) {
-        id = aId;
-    }
-
-    public EWork getWorkplace() {
-        return workplace;
-    }
-
-    public void setWorkplace(EWork aWorkplace) {
-        workplace = aWorkplace;
-    }
-
-    public Long getWorkDate() {
-        return workDate;
-    }
-
-    public void setWorkDate(Long aWorkDate) {
-        workDate = aWorkDate;
-    }
-
-    public Long getStartDate() {
-        return startDate;
-    }
-
-    public void setStartDate(Long aStartDate) {
-        startDate = aStartDate;
-    }
-
-    public Long getEndDate() {
-        return endDate;
-    }
-
-    public void setEndDate(Long aEndDate) {
-        endDate = aEndDate;
-    }
-
-    public Long getEmployeeId() {
-        return employeeId;
-    }
-
-    public void setEmployeeId(Long aEmployeeId) {
-        employeeId = aEmployeeId;
-    }
 
 }
