@@ -13,6 +13,7 @@ module employees {
         public onDeleteEmployee: ($event) => void;
         employeeId = this.$stateParams.id;
         formContainerVisible = false;
+        public tokenAdmin: boolean = false;
 
         // @ngInject
         constructor(private $translatePartialLoader: ng.translate.ITranslatePartialLoaderService,
@@ -27,12 +28,21 @@ module employees {
 
         private init(){
             this.EmployeeBackService.getEmployeeDetail(this.employeeId).then(this.getEmployeeDetailCallBack);
+            this.EmployeeBackService.getEmployeeDetail(localStorage.getItem("token")).then(this.getEmployeeTokenCallBack);
 
         }
 
 
         private getEmployeeDetailCallBack = (res: IEmployee) => {
             this.employee = res;
+        };
+
+        private getEmployeeTokenCallBack = (res: IEmployee) => {
+            if(res.role == "Admin"){
+                this.tokenAdmin = true;
+            } else {
+                this.tokenAdmin = false;
+            }
         };
 
         private deleteEmployeeId() {
