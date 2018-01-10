@@ -13,8 +13,8 @@ module employees {
         public onSelectEmployee: ($event) => void;
         public newList: boolean;
         private newEmployee: boolean;
-        public actorType = EActorType.EMPLOYEE;
         arrayEmployee: Array<IEmployee>;
+        public showList: boolean = true;
 
 
         // @ngInject

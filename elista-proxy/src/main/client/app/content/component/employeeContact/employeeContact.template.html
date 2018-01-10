@@ -2,15 +2,15 @@
 
     <md-card class="contact__main">
             {{contact.contactType.icon}}
-        <md-subheader class="contact__ header__main">
+        <div class="contact__fix header__main">
             <label translate="contact.dataTitle"></label>
-        </md-subheader>
+        </div>
 
 
         <div ng-repeat="con in contact.employeeContact">
         <div class="contact__item">
 
-            <i class="contact__fa fa fa-skype" aria-hidden="true"></i>
+            <md-icon class="contact__fa">phone</md-icon>
 
             <div  layout="column">
                 <a class="contact__value"

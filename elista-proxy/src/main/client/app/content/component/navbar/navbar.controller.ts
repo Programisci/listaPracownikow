@@ -16,6 +16,7 @@ module employees {
 
       // @ngInject
     constructor(private EmployeeBackService: IEmployeeBackService,
+                private $state: ng.ui.IStateService,
               private $translatePartialLoader: ng.translate.ITranslatePartialLoaderService) {
       this.$translatePartialLoader.addPart('main');
       this.$translatePartialLoader.addPart('icons');
@@ -40,6 +41,11 @@ module employees {
 
       this.inputContainerVisible = !this.inputContainerVisible;
     };
+
+    public logout(){
+      localStorage.clear();
+      this.$state.go('access.signin');
+    }
 
   }
 

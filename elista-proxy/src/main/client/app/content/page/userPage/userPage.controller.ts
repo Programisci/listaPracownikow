@@ -9,6 +9,7 @@ module employees {
 
         private refreshEmployee: boolean = false;
         public employeDetail: IEmployee;
+        public showList: boolean = true;
 
         // @ngInject
         constructor(private EmployeeBackService: IEmployeeBackService,
@@ -20,6 +21,11 @@ module employees {
         private getEmployeeCallBack = (res: IEmployee) => {
             this.employeDetail = res;
         };
+
+        public toggleShow(){
+            console.log("czesc");
+            this.showList = !this.showList
+        }
 
         private refreshAfterAdd(hideVariable) {
             this.refreshEmployee = true;

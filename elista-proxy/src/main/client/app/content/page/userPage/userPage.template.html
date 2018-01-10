@@ -5,8 +5,12 @@
         <navbar refresh-list-after-add="userCtr.refreshAfterAdd($event)"></navbar>
     </div>
 
-
-<div class="userPage__list">
+<div ng-click="userCtr.toggleShow()" class="employeeList__show">
+    <md-button class="md-icon-button user__btn">
+        <md-icon class="employeeList__icon" translate="icons.menu"></md-icon>
+    </md-button>
+</div>
+<div  ng-if="userCtr.showList == true" class="userPage__list">
     <employee new-employee="userCtr.refreshEmployee"></employee>
 
 </div>

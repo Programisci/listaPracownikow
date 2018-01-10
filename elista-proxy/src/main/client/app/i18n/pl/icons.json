@@ -8,6 +8,8 @@
     "arrowRight": "subdirectory_arrow_right",
     "local": "local_activity",
     "msg": "message",
-    "search": "seasrch"
+    "search": "seasrch",
+    "menu": "menu",
+    "powerSettingsNew": "power_settings_new"
   }
 }

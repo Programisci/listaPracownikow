@@ -5,12 +5,17 @@
 
 .userPage__box{
   height: 100vh;
+  position: relative;
 }
 
 .userPage__list{
+  position: absolute;
+  top: 0;
+  left: 0;
   float: left;
   width: 20%;
   box-sizing: border-box;
+  z-index: 1;
 }
 
 .userPage__content{
@@ -25,4 +30,10 @@
   width: 33%;
   float: left;
   padding: 10px 0 0 10px;
+}
+
+.user__btn{
+  z-index: 100;
+  top: 15px;
+  left: 5px;
 }
