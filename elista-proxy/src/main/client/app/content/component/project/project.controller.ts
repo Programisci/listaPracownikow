@@ -101,7 +101,7 @@ module employees {
         private saveProjectCallBack = (response) => {
             this.formContainerVisible = false;
             this.init();
-            this.projectNew = defaultStatus;
+            // this.projectNew = defaultStatus;
         };
 
         private deleteProjectId(id: number) {
