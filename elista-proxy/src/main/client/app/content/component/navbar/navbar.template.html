@@ -14,13 +14,9 @@
 
         <div class="navbar__right">
             <div class="navbar__welcome">Witaj, {{navbar.employeDetail.name}} {{navbar.employeDetail.lastname}}</div>
-            <md-button class="btn__input md-icon-button"
-                       ng-if="navbar.showAdminFunction == true"
-                       ng-click="navbar.slide()"
-                       aria-label="Favorite">
-
-                <md-icon>search</md-icon>
-            </md-button>
+            <img src="{{navbar.employeDetail.avatarPath}}"
+                 class="md-avatar nav__avatar"
+                 alt="{{navbar.employeDetail.name}} avatar" />
             <md-button class="btn__input md-icon-button"
                        ng-if="navbar.showAdminFunction == true"
                        ng-click="navbar.slide()"

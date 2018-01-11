@@ -53,6 +53,7 @@
   z-index: 6;
 }
 
+
 .navbar__btn{
   color: black;
   float: right;
@@ -66,6 +67,13 @@
 
 .navbar__btn{
   background: #4CAF50;
+}
+
+.nav__avatar{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-left: 10px;
 }
 
 .navbar__welcome{
@@ -86,5 +94,28 @@
     position: absolute;
     top: -3px;
     right: 5px;
+  }
+}
+
+
+
+@media (max-width: 798px) and (min-width: 603px){
+  .navbar__content{
+    width: 50%;
+  }
+
+  .navbar__form {
+    max-height: 100vh;
+    overflow: auto;
+  }
+}
+
+@media (max-width: 603px) and (min-width: 1px){
+  .navbar__content{
+    width: 100%;
+  }
+  .navbar__form {
+    max-height: 100%;
+    overflow: auto;
   }
 }
