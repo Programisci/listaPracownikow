@@ -15,14 +15,18 @@ module employees {
         timesheetEmployeeArray: Array<ITimesheet> = [];
         formContainerVisible = false;
         timesheetNew: ITimesheet;
+        public employeDetail: IEmployee;
+        public showAdminFunction: boolean = false;
 
 
         // @ngInject
         constructor(private $translatePartialLoader: ng.translate.ITranslatePartialLoaderService,
                     private TimesheetService: ITimesheetService,
+                    private EmployeeBackService: IEmployeeBackService,
                     private $stateParams: ActorsStateParams) {
             this.$translatePartialLoader.addPart('timesheet');
             this.$translatePartialLoader.addPart('icons');
+            this.EmployeeBackService.getEmployeeDetail(localStorage.getItem("token")).then(this.getEmployeeCallBack)
             this.init();
 
         }
@@ -32,6 +36,17 @@ module employees {
             this.TimesheetService.getTimesheet().then(this.getTimesheetCallBack);
 
         };
+
+
+        private getEmployeeCallBack = (res: IEmployee) => {
+            this.employeDetail = res;
+            if(this.employeDetail.role == "Admin"){
+                this.showAdminFunction = true;
+            } else {
+                this.showAdminFunction = false;
+            }
+        };
+
         private getTimesheetCallBack = (res: Array<ITimesheet>) => {
             this.timesheetArray = res;
 

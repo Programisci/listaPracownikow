@@ -15,6 +15,7 @@
 
                 </div>
                 <md-icon class="skills__btn"
+                         ng-if="skillCtr.showId"
                          ng-click="skillCtr.deleteSkillsId(skills.id)"
                          translate="icons.close"></md-icon>
             </div>
@@ -24,6 +25,7 @@
 
         <md-list-item>
             <md-button class="contact__done"
+                       ng-if="skillCtr.showAdminFunction || skillCtr.showId"
                        ng-click="skillCtr.formcontainer()"
                        type="submit">
                 <md-icon translate="icons.add"></md-icon>

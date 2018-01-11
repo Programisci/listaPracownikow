@@ -32,6 +32,7 @@ module employees {
        this.EmployeeBackService.getInitProject();
        this.EmployeeBackService.getInitSkill();
        this.EmployeeBackService.getInitTimesheet();
+       this.EmployeeBackService.getInitTopic();
        this.addDataBase == false;
 
      };

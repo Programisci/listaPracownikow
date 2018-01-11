@@ -10,6 +10,7 @@ module employees {
         startDate: number;
         endDate: number;
         employeeId: number;
+        creationDate:number;
     }
 
 }

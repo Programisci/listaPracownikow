@@ -13,16 +13,27 @@ module employees {
         formContainerVisible = false;
         skillsArray: Array<ISkills>=[];
         skillsEmployeeArray: Array<ISkills>=[];
+        public showId: boolean = false;
+        public currentUser: number;
+        arrayEmployee: Array<IEmployee>;
+        public showAdminFunction: boolean = false;
 
 
         // @ngInject
         constructor(private $translatePartialLoader: ng.translate.ITranslatePartialLoaderService,
                     private SkillsService: ISkillsService,
+                    private EmployeeBackService: IEmployeeBackService,
                     private $stateParams: ActorsStateParams
         ) {
             this.init();
             this.$translatePartialLoader.addPart('icons');
             this.$translatePartialLoader.addPart('skills');
+            this.currentUser = localStorage.getItem('token');
+            if(this.employeeId == localStorage.getItem('token')){
+                this.showId = true;
+            }
+            this.EmployeeBackService.getEmployee().then(this.getEmployeeCallBack);
+
         }
         private init() {
             this.skillsArray =[];
@@ -30,11 +41,25 @@ module employees {
             this.SkillsService.getSkill().then(this.getSkillsCallBack);
 
         };
+
+        private getEmployeeCallBack = (res: Array<IEmployee>) => {
+            this.arrayEmployee = res;
+            for (let empl of this.arrayEmployee){
+                if(empl.id == localStorage.getItem('token')){
+                    if(empl.role == "Admin"){
+                        this.showAdminFunction = true;
+                    } else {
+                        this.showAdminFunction = false;
+                    }
+                }
+            }
+        };
         private getSkillsCallBack = (res: Array<ISkills>) => {
             this.skillsArray = res;
 
             for (var i = 0; i < this.skillsArray.length; i++){
                 if (this.skillsArray[i].employeeId == this.employeeId){
+                    this.currentUser = this.skillsArray[i].employeeId;
                         this.skillsEmployeeArray.push(this.skillsArray[i]);
                 }
             }

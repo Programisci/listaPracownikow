@@ -19,6 +19,9 @@ public class TimesheetOB {
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SEKWENCJA")
     private Long id;
 
+    @Column(name = "creationDate", columnDefinition = "TIMESTAMP")
+    private Date creationDate;
+
     @Enumerated(EnumType.STRING)
     @Column(name = "workplace")
     private EWork workplace;

@@ -52,7 +52,7 @@ public class TimesheetServiceImpl implements ITimesheetService {
 
     private TimesheetOB create(TimesheetDTO dto) {
         TimesheetOB ob = timesheetConverter.dtoToOb(dto);
-//        ob.setCreationDate(new Date());
+        ob.setCreationDate(new Date());
         ob = timesheetRepository.save(ob);
         return ob;
     }

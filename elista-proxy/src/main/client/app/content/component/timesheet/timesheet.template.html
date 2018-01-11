@@ -16,7 +16,7 @@
             <div class="timesheet__text" translate="time.where"></div>
         </div>
             <div ng-repeat="time in timesheetCtr.timesheetEmployeeArray" class="timesheet__item"  ng-click="null">
-                <div layout="column">
+                <div layout="column" title="{{time.creationDate | date: 'dd/MM/yy HH:mm'}}">
                     <div class="timesheet__top">
                         <div class="timesheet__cel">
                             {{time.workDate | date: 'dd/MM/yy'}}
@@ -36,7 +36,7 @@
                     </div>
 
                 </div>
-                <md-icon class="timesheet__btn"
+                <md-icon ng-if="timesheetCtr.showAdminFunction == true" class="timesheet__btn"
                          ng-click="timesheetCtr.deleteTimesheetId(time.id)"
                          translate="icons.close"></md-icon>
 

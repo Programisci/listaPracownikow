@@ -13,7 +13,7 @@
   top: 0;
   left: 0;
   float: left;
-  width: 20%;
+  width: 30%;
   box-sizing: border-box;
   z-index: 1;
 }
@@ -40,4 +40,30 @@
 
 .userPage__show{
   position: absolute;
+}
+
+@media (max-width: 798px) and (min-width: 603px){
+  .userPage{
+    width: 50%;
+  }
+  .userPage:first-child{
+    margin-top: -3px;
+  }
+
+  .userPage__list{
+    width: 50%;
+  }
+}
+
+@media (max-width: 603px) and (min-width: 1px){
+  .userPage{
+    width: 100%;
+  }
+  .userPage:first-child{
+    margin-top: -3px;
+  }
+
+  .userPage__list{
+    width: 100%;
+  }
 }
