@@ -14,6 +14,7 @@ module employees {
         getInitSkill ();
         getInitTimesheet ();
         getInitTopic ();
+        getInitPost ();
 
     }
 
@@ -76,6 +77,15 @@ module employees {
         };
         public getInitTopic () {
             return this.$resource(`${this.ConfigService.getHost()}/topic/init`, {}, {
+                'query': {
+                    method: 'GET',
+                    isArray: true
+                }
+            }).query({}).$promise
+
+        };
+        public getInitPost () {
+            return this.$resource(`${this.ConfigService.getHost()}/post/init`, {}, {
                 'query': {
                     method: 'GET',
                     isArray: true

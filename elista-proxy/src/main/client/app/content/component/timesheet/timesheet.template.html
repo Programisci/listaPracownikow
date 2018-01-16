@@ -44,7 +44,7 @@
 
         </div>
 
-        <md-button ng-click="timesheetCtr.formContainer()" class="project__btn">
+        <md-button ng-if="timesheetCtr.showAdminFunction || timesheetCtr.showId" ng-click="timesheetCtr.formContainer()" class="project__btn">
             <md-icon translate="icons.edit"></md-icon>
         </md-button>
 

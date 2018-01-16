@@ -14,6 +14,7 @@ module employees {
         timesheetArray: Array<ITimesheet> = [];
         timesheetEmployeeArray: Array<ITimesheet> = [];
         formContainerVisible = false;
+        public showId: boolean = false;
         timesheetNew: ITimesheet;
         public employeDetail: IEmployee;
         public showAdminFunction: boolean = false;
@@ -28,6 +29,9 @@ module employees {
             this.$translatePartialLoader.addPart('icons');
             this.EmployeeBackService.getEmployeeDetail(localStorage.getItem("token")).then(this.getEmployeeCallBack)
             this.init();
+            if(this.employeeId == localStorage.getItem('token')){
+                this.showId = true;
+            }
 
         }
         private init() {

@@ -33,6 +33,7 @@ module employees {
        this.EmployeeBackService.getInitSkill();
        this.EmployeeBackService.getInitTimesheet();
        this.EmployeeBackService.getInitTopic();
+       this.EmployeeBackService.getInitPost();
        this.addDataBase == false;
 
      };
@@ -42,6 +43,8 @@ module employees {
       private getEmployeeCallBack = (res: Array<IEmployee>) => {
           this.arrayEmployee = res;
       };
+
+
 
 
     public login(user: IUser) {

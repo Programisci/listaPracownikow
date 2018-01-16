@@ -13,6 +13,9 @@ module employees {
         allContacts: Array<IContact> = [];
         employeeContact: Array<IContact> = [];
         formContainerVisible = false;
+        public showId: boolean = false;
+        public showAdminFunction: boolean = false;
+
 
 
         // @ngInject
@@ -25,13 +28,25 @@ module employees {
             this.init();
             this.$translatePartialLoader.addPart('contact');
             this.$translatePartialLoader.addPart('icons');
+            if(this.employeeId == localStorage.getItem('token')){
+                this.showId = true;
+            }
         }
 
         private init() {
+            this.EmployeeBackService.getEmployeeDetail(localStorage.getItem("token")).then(this.getEmployeeCallBack);
             this.allContacts = [];
             this.employeeContact = [];
                 this.ContactTypeService.getContact().then(this.getContactsCallBack);
         }
+
+        private getEmployeeCallBack = (res: IEmployee) => {
+            if(res.role == "Admin"){
+                this.showAdminFunction = true;
+            } else {
+                this.showAdminFunction = false;
+            }
+        };
 
         private getContactsCallBack = (res: Array<IContact>) => {
             this.allContacts = res;

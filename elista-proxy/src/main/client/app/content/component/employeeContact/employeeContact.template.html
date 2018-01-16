@@ -23,6 +23,7 @@
 
 
             <md-icon class="contact__delete"
+                     ng-if="contact.showAdminFunction || contact.showId"
                      ng-click="contact.deleteContactId(con.id)"
                      translate="icons.close"></md-icon>
         </div>
@@ -32,6 +33,7 @@
 
         <md-list-item>
             <md-button class="contact__done"
+                       ng-if="contact.showAdminFunction || contact.showId"
                        ng-click="contact.formContainer()"
                        type="submit">
                 <md-icon translate="icons.add"></md-icon>

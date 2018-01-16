@@ -14,6 +14,8 @@ module employees {
         employeeId = this.$stateParams.id;
         formContainerVisible = false;
         public tokenAdmin: boolean = false;
+        public showId: boolean = false;
+
 
         // @ngInject
         constructor(private $translatePartialLoader: ng.translate.ITranslatePartialLoaderService,
@@ -27,6 +29,9 @@ module employees {
         }
 
         private init(){
+            if(this.employeeId == localStorage.getItem('token')){
+                this.showId = true;
+            }
             this.EmployeeBackService.getEmployeeDetail(this.employeeId).then(this.getEmployeeDetailCallBack);
             this.EmployeeBackService.getEmployeeDetail(localStorage.getItem("token")).then(this.getEmployeeTokenCallBack);
 

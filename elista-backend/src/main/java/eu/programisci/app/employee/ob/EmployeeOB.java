@@ -1,13 +1,11 @@
 package eu.programisci.app.employee.ob;
 
-import eu.programisci.app.employee.enums.EPosition;
 import eu.programisci.app.employee.enums.ERole;
 import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
 import java.util.Date;
-import java.util.Set;
 
 @Getter
 @Setter

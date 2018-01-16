@@ -40,6 +40,7 @@
 
         <div class="employee__btns">
             <md-button class="detail__btn"
+                       ng-if="detail.tokenAdmin || detail.showId"
                        ng-click="detail.formContainer()">
 
                 <md-icon type="checkbox"
